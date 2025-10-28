@@ -1,6 +1,6 @@
 # netlify.toml
 [build]
-  command = "npm ci && npm run pdf:all"
+  command = ""
   publish = "."
 
 [build.environment]
