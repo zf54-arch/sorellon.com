@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Capabilities — Sorellon Limited</title>
+  <meta name="description" content="End to end sourcing, compliance, and UK delivery for public sector buyers. Fast quotes, audit ready paperwork, and reliable fulfilment." />
+  <meta name="theme-color" content="#0b3d2e" />
+  <link rel="canonical" href="https://sorellon.com/capabilities.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Capabilities — Sorellon Limited" />
+  <meta property="og:description" content="End to end sourcing, compliance, and UK delivery for public sector buyers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/favicon.png" />
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+  <!-- Vendor CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Site CSS -->
+  <link href="/styles.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --forest:#093B33;
+      --forest-2:#14664B;
+      --ink:#0f172a;
+      --bg:#f8faf9;
+      --card:#ffffff;
+      --accent:#1ad09e;
+      --section:#e7f6f0;
+    }
+    html,body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+    }
+    .text-accent{color:var(--accent)!important;}
+    .opacity-85{opacity:.85;}
+
+    .btn-brand{
+      background:linear-gradient(90deg, var(--forest-2), var(--forest));
+      color:#fff;border:none;font-weight:600;
+      box-shadow:0 4px 24px -8px #05493322;
+      transition:box-shadow .2s, transform .2s;
+    }
+    .btn-brand:hover{
+      background:linear-gradient(90deg, var(--forest), var(--forest-2));
+      color:#fff;box-shadow:0 6px 28px -8px #05493333;
+      transform:translateY(-1px);
+    }
+    .link-brand{color:var(--forest-2);text-decoration:none}
+    .link-brand:hover{text-decoration:underline}
+
+    /* HERO */
+    .hero{
+      position:relative;overflow:hidden;
+      background:linear-gradient(112deg, var(--forest, #093B33) 0%, #10664e 70%, #176967 100%);
+      color:#fff;padding:96px 0;display:flex;justify-content:center;
+    }
+    .hero .container{
+      position:relative;z-index:2;max-width:1040px;width:100%;padding-inline:32px;
+      display:flex;flex-direction:column;gap:.5rem;text-align:left;
+    }
+    .hero-illustration{
+      position:absolute;inset:0;pointer-events:none;
+      background:
+        radial-gradient(90% 60% at 55% 10%, rgba(26,217,158,0.06), rgba(255,255,255,0) 68%),
+        radial-gradient(75% 42% at 90% 55%, rgba(26,217,158,0.11), rgba(0,0,0,0) 90%),
+        repeating-linear-gradient(120deg, rgba(255,255,255,0.025) 0 3px, transparent 3px 38px);
+      opacity:.25;
+    }
+    .hero h1{margin:0;font-weight:800;line-height:1.15;font-size:clamp(2.2rem,5vw,3.1rem)}
+    .hero .lead{font-size:1.25rem;font-weight:500;margin:0}
+    .hero-badge{
+      display:inline-flex;gap:.75rem;align-items:center;padding:.35rem 1rem;border-radius:999px;
+      background:rgba(26,217,158,.09);color:#fff;border:1px solid #fff2;backdrop-filter:blur(2px);
+      font-weight:600;box-shadow:0 2px 8px 0 #0002;
+    }
+    .hero-badge .seg + .seg{border-left:1px solid #fff3;padding-left:.6rem}
+
+    /* UTIL */
+    .section-accent{background:var(--section)}
+    .section-divider{
+      width:32px;height:4px;border-radius:4px;background:var(--accent);
+      display:inline-block;margin:0 0 1.1rem 0;
+    }
+    .py-6{padding-top:4rem;padding-bottom:4rem}
+
+    /* CARDS */
+    .card-lite{
+      background:var(--card);border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;
+      box-shadow:0 6px 24px -12px #05644d1a;
+    }
+    .icon-bullet{
+      width:40px;height:40px;border-radius:10px;background:var(--section);
+      display:inline-flex;align-items:center;justify-content:center;
+      margin-right:.6rem;color:var(--forest-2)
+    }
+    .step{
+      position:relative;padding-left:2.25rem;
+    }
+    .step:before{
+      content:attr(data-step);
+      position:absolute;left:0;top:.2rem;width:1.6rem;height:1.6rem;border-radius:999px;
+      background:var(--section);color:var(--forest-2);display:flex;align-items:center;justify-content:center;
+      font-weight:700;font-size:.9rem;border:1px solid #cfeee5;
+    }
+
+    /* PRODUCT CARD STYLE FOR EXAMPLES */
+    .product-card{
+      background:var(--card);border:1px solid #e5e8ee;border-radius:1.1rem;
+      padding:1.4rem 1.2rem 1.05rem;box-shadow:0 3px 16px -4px #0f36280d;min-height:160px;height:100%;
+      display:flex;flex-direction:column;justify-content:space-between;
+      transition:box-shadow .17s,border-color .17s;
+    }
+    .product-card h6{font-weight:700;color:var(--forest-2)}
+    .product-card p{color:#626d7a}
+    .product-card .badge{background:var(--section);color:var(--forest-2);font-weight:500;font-size:.95em}
+
+    /* FOOTER */
+    footer{background:var(--forest);color:#d1eeeb}
+    footer a{color:#e2e8f0;text-decoration:underline}
+
+    /* NAV active state */
+    .navbar .nav-link{font-weight:500}
+    .navbar .nav-link.active,
+    .navbar .nav-link[aria-current="page"]{
+      font-weight:600;color:var(--forest-2) !important;
+    }
+
+    @media (max-width:767px){
+      .product-card{padding:1.1rem}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container py-2">
+    <a class="navbar-brand d-flex align-items-center" href="/index.html">
+      <img src="/assets/logo.svg" alt="Sorellon" height="35" class="me-2" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/sectors.html">Sectors</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold active" aria-current="page" href="/capabilities.html">Capabilities</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/why.html">Why Sorellon</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/contact.html">Contact</a></li>
+      </ul>
+      <a href="/contact.html" class="btn btn-brand ms-lg-3 shadow-sm"><i class="fa-solid fa-arrow-right-to-bracket me-2"></i>Request a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero position-relative">
+  <div class="hero-illustration"></div>
+  <div class="container">
+    <nav class="small mb-2" aria-label="breadcrumb">
+      <a href="/index.html" class="text-white text-decoration-none">Home</a>
+      <span class="mx-1">›</span>
+      <span class="opacity-85">Capabilities</span>
+    </nav>
+    <span class="hero-badge mb-3">
+      <span class="seg"><i class="fa-solid fa-bolt me-1"></i>Rapid quotes</span>
+      <span class="seg"><i class="fa-solid fa-file-shield me-1"></i>Audit ready</span>
+      <span class="seg"><i class="fa-solid fa-truck-fast me-1"></i>UK delivery</span>
+    </span>
+    <h1 class="mb-2">Simple products. Serious delivery.</h1>
+    <p class="lead mb-0">End to end sourcing, compliance, and delivery for UK public sector buyers. Clear paperwork, responsive updates, and reliable fulfilment.</p>
+  </div>
+</header>
+
+<!-- WHAT WE DO (pillars) -->
+<section class="py-6">
+  <div class="container">
+    <span class="section-divider"></span>
+    <h2 class="fw-bold mb-1" style="color:#125f43;">What we do</h2>
+    <p class="text-muted mb-4">Four core capabilities that keep your teams supplied without fuss.</p>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card-lite h-100">
+          <div class="icon-bullet mb-2"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h5 class="mb-1" style="color:#125f43;">Sourcing</h5>
+          <p class="mb-0 small text-muted">Approved factories in the UK, EU, and trusted global locations. We quote to your exact specification and pack format.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-lite h-100">
+          <div class="icon-bullet mb-2"><i class="fa-solid fa-shield-halved"></i></div>
+          <h5 class="mb-1" style="color:#125f43;">Compliance</h5>
+          <p class="mb-0 small text-muted">UKCA or CE where needed, technical files, declarations, and lot trace. Everything arranged and filed for audit.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-lite h-100">
+          <div class="icon-bullet mb-2"><i class="fa-solid fa-diagram-project"></i></div>
+          <h5 class="mb-1" style="color:#125f43;">Supply planning</h5>
+          <p class="mb-0 small text-muted">Firm lead times with option for call off and repeat cycles. Multi site drops and split deliveries supported.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-lite h-100">
+          <div class="icon-bullet mb-2"><i class="fa-solid fa-headset"></i></div>
+          <h5 class="mb-1" style="color:#125f43;">UK support</h5>
+          <p class="mb-0 small text-muted">Named contact, clear status updates, and quick answers. No call centres.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="py-6 section-accent">
+  <div class="container">
+    <span class="section-divider"></span>
+    <h2 class="fw-bold mb-1" style="color:#125f43;">How it works</h2>
+    <p class="text-muted mb-4">A clear path from quote to delivery.</p>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card-lite h-100">
+          <div class="step mb-3" data-step="1">
+            <h6 class="mb-1" style="color:#125f43;">Send an RFQ</h6>
+            <p class="small text-muted mb-0">Tell us product, quantity, and due date. Share any standards and lab tests you need.</p>
+          </div>
+          <div class="step mb-3" data-step="2">
+            <h6 class="mb-1" style="color:#125f43;">Receive a quote</h6>
+            <p class="small text-muted mb-0">You get price, lead time, technical notes, and samples where useful. Target is reply within one business day.</p>
+          </div>
+          <div class="step mb-3" data-step="3">
+            <h6 class="mb-1" style="color:#125f43;">Approve and plan</h6>
+            <p class="small text-muted mb-0">We lock the schedule, arrange paperwork, and book production. You get status updates at key points.</p>
+          </div>
+          <div class="step" data-step="4">
+            <h6 class="mb-1" style="color:#125f43;">Deliver and support</h6>
+            <p class="small text-muted mb-0">UK delivery to one or many sites. Lot codes recorded and documents stored for recall.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card-lite h-100">
+          <h6 class="mb-3" style="color:#125f43;"><i class="fa-solid fa-clipboard-check me-2 text-accent"></i>Compliance pack</h6>
+          <ul class="small text-muted mb-0 ps-3">
+            <li>Declarations and technical files</li>
+            <li>Safety data sheets and test reports</li>
+            <li>Lot trace and supplier due diligence</li>
+            <li>UK customs and import paperwork handled</li>
+          </ul>
+          <hr>
+          <h6 class="mb-2" style="color:#125f43;"><i class="fa-solid fa-gauge-high me-2 text-accent"></i>Service levels</h6>
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="card-lite h-100 text-center">
+                <div class="fs-4 fw-bold" style="color:#125f43;">24 h</div>
+                <div class="small text-muted">Quote target</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card-lite h-100 text-center">
+                <div class="fs-4 fw-bold" style="color:#125f43;">Multi site</div>
+                <div class="small text-muted">UK delivery support</div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 small text-muted">Ask for call off schedules for repeated use items.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXAMPLE CATEGORIES (short) -->
+<section class="py-6">
+  <div class="container">
+    <span class="section-divider"></span>
+    <h2 class="fw-bold mb-1" style="color:#125f43;">Example categories</h2>
+    <p class="text-muted mb-4">We source to the exact spec you need. The list below is indicative.</p>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="product-card h-100">
+          <h6 class="mb-1"><i class="fa-solid fa-spray-can-sparkles me-2 text-accent"></i>Surface wipes</h6>
+          <p class="mb-2">EN1276 or EN14476 where required. Tubs and sachets. Private label on request.</p>
+          <span class="badge"><i class="fa-solid fa-circle-info me-1"></i>Short notice possible</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="product-card h-100">
+          <h6 class="mb-1"><i class="fa-solid fa-broom-ball me-2 text-accent"></i>Janitorial kits</h6>
+          <p class="mb-2">Rollers, trays, cloths, sacks, and signage in site ready packs.</p>
+          <span class="badge"><i class="fa-solid fa-circle-info me-1"></i>Custom contents</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="product-card h-100">
+          <h6 class="mb-1"><i class="fa-solid fa-hand-holding-medical me-2 text-accent"></i>Healthcare consumables</h6>
+          <p class="mb-2">Syringes, catheters, and PPE. UKCA or CE and lot trace provided.</p>
+          <span class="badge"><i class="fa-solid fa-circle-info me-1"></i>NHS ready</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RFQ CARD -->
+<section class="py-6 section-accent">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-7">
+        <span class="section-divider"></span>
+        <h2 class="fw-bold mb-2" style="color:#125f43;">Start an RFQ</h2>
+        <p class="text-muted mb-3">Share quantity, target date, and any standards. We reply within one business day.</p>
+        <ul class="small text-muted ps-3 mb-4">
+          <li>Named contact and status updates</li>
+          <li>Audit ready documents stored and shared</li>
+          <li>UK delivery to single or many sites</li>
+        </ul>
+      </div>
+      <div class="col-lg-5">
+        <div class="card-lite">
+          <h6 class="mb-3" style="color:#125f43;"><i class="fa-solid fa-bolt me-2 text-accent"></i>Quick form</h6>
+          <form name="rfq-capabilities" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="rfq-capabilities">
+            <p hidden><label>Do not fill: <input name="bot-field" /></label></p>
+            <div class="mb-2">
+              <label class="form-label" for="product">Product</label>
+              <input type="text" class="form-control" id="product" name="product" placeholder="e.g. 5,000 tubs of wipes, EN1276" required autocomplete="off">
+            </div>
+            <div class="row g-2">
+              <div class="col-6">
+                <label class="form-label" for="quantity">Quantity</label>
+                <input type="number" class="form-control" id="quantity" name="quantity" placeholder="5000" min="1" step="1" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label" for="date">Needed by</label>
+                <input type="date" class="form-control" id="date" name="date">
+              </div>
+            </div>
+            <div class="mb-2 mt-2">
+              <label class="form-label" for="email">Your email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="you@org.gov.uk" required autocomplete="email">
+            </div>
+            <button type="submit" class="btn btn-brand w-100 mt-2">Get a quote</button>
+            <p class="small text-muted mt-2 mb-0"><i class="fa-solid fa-lock me-1"></i>Your data stays private. No marketing emails.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRAMEWORKS -->
+<section class="py-6">
+  <div class="container">
+    <span class="section-divider"></span>
+    <h2 class="fw-bold mb-1" style="color:#125f43;">Frameworks and registrations</h2>
+    <p class="text-muted mb-3">Aligned with UK public sector procurement. Logos are for illustration.</p>
+    <div class="d-flex flex-wrap gap-4 align-items-center">
+      <img src="https://dummyimage.com/160x40/efefef/9aa&text=CCS" alt="Crown Commercial Service" height="40" loading="lazy" decoding="async">
+      <img src="https://dummyimage.com/180x40/efefef/9aa&text=NHS+Supply+Chain" alt="NHS Supply Chain" height="40" loading="lazy" decoding="async">
+      <img src="https://dummyimage.com/140x40/efefef/9aa&text=Gov.uk" alt="Gov.uk" height="40" loading="lazy" decoding="async">
+      <img src="https://dummyimage.com/150x40/efefef/9aa&text=ISO+9001" alt="ISO 9001" height="40" loading="lazy" decoding="async">
+      <img src="https://dummyimage.com/156x40/efefef/9aa&text=Cyber+Essentials" alt="Cyber Essentials" height="40" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5">
+  <div class="container">
+    <div class="p-4 p-md-5 cta shadow" style="background:linear-gradient(90deg,#023822 10%, #06b687 100%);color:#fff;border-radius:18px;box-shadow:0 4px 32px -11px #012f2524">
+      <div class="row align-items-center g-3">
+        <div class="col-lg-8">
+          <h3 class="mb-2"><i class="fa-solid fa-paper-plane text-accent me-2"></i>Ready to proceed</h3>
+          <p class="mb-0 fs-5">Email <a class="text-white" href="mailto:sales@sorellon.com">sales@sorellon.com</a> or use the form above. A human will reply within one business day.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="/contact.html" class="btn btn-light btn-lg shadow"><i class="fa-regular fa-envelope me-2"></i>Contact Sorellon</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-4 border-top">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div>
+      <img src="/assets/logo.svg" alt="Sorellon" height="28" class="mb-2" />
+      <p class="mb-0 small">Reliable supply for UK public sector buyers.</p>
+    </div>
+    <div class="small mt-3 mt-md-0">
+      <a href="/privacy.html" class="me-2">Privacy</a>•
+      <a href="/terms.html" class="ms-2">Terms</a>
+      <span class="ms-3">© <span id="y"></span> Sorellon Limited</span>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "sorellon-website",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "pdf:cap": "node scripts/generate-pdf.js",
+    "pdf:privacy": "CAP_PAGE=/privacy.html OUT_PDF=assets/policies/Sorellon-Privacy-Policy.pdf node scripts/generate-pdf.js",
+    "pdf:terms": "CAP_PAGE=/terms.html OUT_PDF=assets/policies/Sorellon-Terms-and-Conditions.pdf node scripts/generate-pdf.js",
+    "pdf:all": "npm run pdf:cap && npm run pdf:privacy && npm run pdf:terms",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "puppeteer": "^24.26.1"
+  }
+}

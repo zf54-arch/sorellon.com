@@ -1,0 +1,2 @@
+:root{ --brand-radius:16px } .feature-card{border-radius:var(--brand-radius)}
+.footer-logo{height:32px;display:block}

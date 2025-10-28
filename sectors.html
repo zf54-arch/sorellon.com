@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sectors — Sorellon Limited</title>
+  <meta name="description" content="Public sector buyers we serve: NHS and Healthcare, Local Authorities, Education, Central Government, Housing and Facilities, Emergency Services, Defence, and Transport." />
+  <meta name="theme-color" content="#0b3d2e" />
+  <link rel="canonical" href="https://sorellon.com/sectors.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sectors — Sorellon Limited" />
+  <meta property="og:description" content="Reliable supply for UK public sector buyers across NHS, councils, education, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/favicon.png" />
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+  <!-- Vendor CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Site CSS (optional external) -->
+  <link href="/styles.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --forest:#093B33;
+      --forest-2:#14664B;
+      --ink:#0f172a;
+      --bg:#f8faf9;
+      --card:#ffffff;
+      --accent:#1ad09e;
+      --section:#e7f6f0;
+    }
+    html,body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+    }
+    .text-accent{color:var(--accent)!important}
+    .opacity-85{opacity:.85}
+
+    .btn-brand{
+      background:linear-gradient(90deg, var(--forest-2), var(--forest));
+      color:#fff;border:none;font-weight:600;
+      box-shadow:0 4px 24px -8px #05493322;
+      transition:box-shadow .2s, transform .2s;
+    }
+    .btn-brand:hover{
+      background:linear-gradient(90deg, var(--forest), var(--forest-2));
+      color:#fff;box-shadow:0 6px 28px -8px #05493333;
+      transform:translateY(-1px);
+    }
+    .link-brand{color:var(--forest-2);text-decoration:none}
+    .link-brand:hover{text-decoration:underline}
+
+    /* HERO */
+    .hero{
+      position:relative;overflow:hidden;
+      background:linear-gradient(112deg, var(--forest, #093B33) 0%, #10664e 70%, #176967 100%);
+      color:#fff;padding:96px 0;display:flex;justify-content:center;
+    }
+    .hero .container{
+      position:relative;z-index:2;max-width:1040px;width:100%;padding-inline:32px;
+      display:flex;flex-direction:column;gap:.5rem;text-align:left;
+    }
+    .hero-illustration{
+      position:absolute;inset:0;pointer-events:none;
+      background:
+        radial-gradient(90% 60% at 55% 10%, rgba(26,217,158,0.06), rgba(255,255,255,0) 68%),
+        radial-gradient(75% 42% at 90% 55%, rgba(26,217,158,0.11), rgba(0,0,0,0) 90%),
+        repeating-linear-gradient(120deg, rgba(255,255,255,0.025) 0 3px, transparent 3px 38px);
+      opacity:.25;
+    }
+    .hero h1{margin:0;font-weight:800;line-height:1.15;font-size:clamp(2.2rem,5vw,3.1rem)}
+    .hero .lead{font-size:1.2rem;font-weight:500;margin:0}
+    .crumb a{color:#d9fff4;text-decoration:none}
+    .crumb .divider{opacity:.7;margin:0 .35rem}
+
+    /* Section utilities */
+    .section-accent{background:var(--section)}
+    .section-divider{
+      width:32px;height:4px;border-radius:4px;background:var(--accent);
+      display:inline-block;margin:0 0 1.1rem 0;
+    }
+    .py-6{padding-top:4rem;padding-bottom:4rem}
+
+    /* Cards */
+    .sector-card{
+      background:var(--card);border:1px solid #e5e8ee;border-radius:1.1rem;
+      padding:1.5rem 1.35rem;box-shadow:0 3px 16px -4px #0f36280d;
+      transition:border-color .17s, box-shadow .17s; height:100%;
+      display:flex;flex-direction:column;gap:.75rem;
+    }
+    .sector-card:hover{border-color:var(--accent);box-shadow:0 6px 24px -8px #0f362820}
+    .sector-card h5{font-weight:700;color:var(--forest-2);margin:0}
+    .sector-card p{color:#5f6b79;margin:0}
+    .mini-list{margin:0;padding-left:1.1rem;color:#495464}
+    .mini-list li{margin:.15rem 0}
+    .badge-fit{
+      align-self:flex-start;background:var(--section);color:var(--forest-2);
+      border:1px solid #d6efe6;font-weight:600
+    }
+
+    /* CTA */
+    .cta{background:linear-gradient(90deg,#023822 10%, #06b687 100%);color:#fff;border-radius:18px;box-shadow:0 4px 32px -11px #012f2524}
+    .cta h3{font-weight:700;font-size:2rem}
+    .cta .btn{font-weight:600}
+    .cta a{text-decoration:underline}
+    .cta a:hover{text-decoration:none}
+
+    /* Footer */
+    footer{background:var(--forest);color:#d1eeeb}
+    footer a{color:#e2e8f0;text-decoration:underline}
+    .footer-logo{height:40px;filter:none;margin-bottom:.6rem}
+
+    /* NAV active state */
+    .navbar .nav-link{font-weight:500}
+    .navbar .nav-link.active,
+    .navbar .nav-link[aria-current="page"]{
+      font-weight:600;color:var(--forest-2)!important;
+    }
+
+    @media (max-width:767px){
+      .hero h1{font-size:2rem}
+      .sector-card{padding:1.25rem}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container py-2">
+    <a class="navbar-brand d-flex align-items-center" href="/index.html">
+      <img src="/assets/logo.svg" alt="Sorellon" height="35" class="me-2" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/sectors.html">Sectors</a></li>
+        <li class="nav-item"><a class="nav-link" href="/capabilities.html">Capabilities</a></li>
+        <li class="nav-item"><a class="nav-link" href="/why.html">Why Sorellon</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+      </ul>
+      <a href="/contact.html" class="btn btn-brand ms-lg-3 shadow-sm"><i class="fa-solid fa-arrow-right-to-bracket me-2"></i>Request a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero position-relative">
+  <div class="hero-illustration"></div>
+  <div class="container">
+    <nav class="crumb small mb-2" aria-label="breadcrumb">
+      <a href="/index.html">Home</a><span class="divider"> &gt; </span><span>Sectors</span>
+    </nav>
+    <h1 class="mb-2">Public sector buyers we serve</h1>
+    <p class="lead">Reliable supply for NHS Trusts, councils, schools, central government and more. Fast quotes, clear compliance, smooth delivery.</p>
+    <div class="mt-2 small opacity-85" style="color:#dafbf2;">
+      <span><i class="fa-solid fa-circle-dot me-1"></i>SME</span>&nbsp;
+      <span><i class="fa-solid fa-location-dot me-1"></i>UK based</span>&nbsp;
+      <span><i class="fa-solid fa-file-shield me-1"></i>Import compliance handled</span>
+    </div>
+  </div>
+</header>
+
+<!-- SECTORS GRID -->
+<section class="py-6">
+  <div class="container">
+    <div class="row mb-4 align-items-end">
+      <div class="col-lg-8">
+        <span class="section-divider"></span>
+        <h2 class="fw-bold mb-1" style="color:#125f43;">Sectors</h2>
+        <p class="text-muted mb-0">Clear scope, audit ready paperwork, dependable delivery. We quote to your exact specification from UK or trusted global sources.</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- NHS & Healthcare -->
+      <div class="col-md-6 col-lg-4">
+        <div class="sector-card h-100">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-heart-pulse text-accent fs-4"></i>
+            <h5 class="mb-0">NHS and Healthcare</h5>
+          </div>
+          <p>Surgical and ward consumables with lot traceability and UKCA or CE evidence. Packaged and labelled to Trust requirements.</p>
+          <ul class="mini-list">
+            <li>Syringes, catheters, PPE</li>
+            <li>Wipes EN1276 and EN14476</li>
+            <li>Private label options</li>
+          </ul>
+          <span class="badge badge-fit px-2 py-1 mt-1"><i class="fa-solid fa-circle-check me-1"></i>NHS fit</span>
+        </div>
+      </div>
+
+      <!-- Local Authorities -->
+      <div class="col-md-6 col-lg-4">
+        <div class="sector-card h-100">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-building-columns text-accent fs-4"></i>
+            <h5 class="mb-0">Local Authorities</h5>
+          </div>
+          <p>Value for money essentials for councils and ALMOs with multi site delivery and simple re order paths.</p>
+          <ul class="mini-list">
+            <li>Janitorial and hygiene</li>
+            <li>Painting and maintenance kits</li>
+            <li>Bags and signage</li>
+          </ul>
+          <span class="badge badge-fit px-2 py-1 mt-1"><i class="fa-solid fa-circle-check me-1"></i>Framework friendly</span>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="col-md-6 col-lg-4">
+        <div class="sector-card h-100">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-graduation-cap text-accent fs-4"></i>
+            <h5 class="mb-0">Education</h5>
+          </div>
+          <p>Procurement that fits MATs, colleges and universities with clear specifications and straightforward delivery windows.</p>
+          <ul class="mini-list">
+            <li>Classroom and campus cleaning</li>
+            <li>Sports and hall maintenance kits</li>
+            <li>Bulk wipes and dispensers</li>
+          </ul>
+          <span class="badge badge-fit px-2 py-1 mt-1"><i class="fa-solid fa-circle-check me-1"></i>PO and portal ready</span>
+        </div>
+      </div>
+
+      <!-- Central Government -->
+      <div class="col-md-6 col-lg-4">
+        <div class="sector-card h-100">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-landmark text-accent fs-4"></i>
+            <h5 class="mb-0">Central Government and Agencies</h5>
+          </div>
+          <p>Consistent supply at scale with security minded logistics and audit packs that pass scrutiny.</p>
+          <ul class="mini-list">
+            <li>Standard consumables and MRO</li>
+            <li>Sustainable alternatives on request</li>
+            <li>Lot and batch documentation</li>
+          </ul>
+          <span class="badge badge-fit px-2 py-1 mt-1"><i class="fa-solid fa-circle-check me-1"></i>CCS aligned</span>
+        </div>
+      </div>
+
+      <!-- Housing & FM -->
+      <div class="col-md-6 col-lg-4">
+        <div class="sector-card h-100">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-house-chimney text-accent fs-4"></i>
+            <h5 class="mb-0">Housing and Facilities</h5>
+          </div>
+          <p>Site ready bundles for estates teams with repeat call offs and no fuss deliveries.</p>
+          <ul class="mini-list">
+            <li>Rollers, trays, tape and sheets</li>
+            <li>Cloths, mops and buckets</li>
+            <li>Bulk refuse and recycling sacks</li>
+          </ul>
+          <span class="badge badge-fit px-2 py-1 mt-1"><i class="fa-solid fa-circle-check me-1"></i>Multi site delivery</span>
+        </div>
+      </div>
+
+      <!-- Emergency Services -->
+      <div class="col-md-6 col-lg-4">
+        <div class="sector-card h-100">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-truck-medical text-accent fs-4"></i>
+            <h5 class="mb-0">Emergency Services</h5>
+          </div>
+          <p>Operational consumables with dependable availability and clear substitutions when required.</p>
+          <ul class="mini-list">
+            <li>Response wipes and cleaning</li>
+            <li>Vehicle and station supplies</li>
+            <li>PPE and disposables</li>
+          </ul>
+          <span class="badge badge-fit px-2 py-1 mt-1"><i class="fa-solid fa-circle-check me-1"></i>Operational fit</span>
+        </div>
+      </div>
+
+      <!-- Defence & MoD -->
+      <div class="col-md-6 col-lg-4">
+        <div class="sector-card h-100">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-shield-halved text-accent fs-4"></i>
+            <h5 class="mb-0">Defence and MoD</h5>
+          </div>
+          <p>Supply to specification with packaging and documentation aligned to site protocols.</p>
+          <ul class="mini-list">
+            <li>Hygiene and maintenance items</li>
+            <li>Kitting by unit or location</li>
+            <li>Assured chain of custody</li>
+          </ul>
+          <span class="badge badge-fit px-2 py-1 mt-1"><i class="fa-solid fa-circle-check me-1"></i>Spec driven</span>
+        </div>
+      </div>
+
+      <!-- Transport -->
+      <div class="col-md-6 col-lg-4">
+        <div class="sector-card h-100">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-train-subway text-accent fs-4"></i>
+            <h5 class="mb-0">Transport</h5>
+          </div>
+          <p>Depot and fleet friendly supply with repeat schedules and simple call offs.</p>
+          <ul class="mini-list">
+            <li>Cabin and depot cleaning</li>
+            <li>Absorbents and spill control</li>
+            <li>Signage and consumables</li>
+          </ul>
+          <span class="badge badge-fit px-2 py-1 mt-1"><i class="fa-solid fa-circle-check me-1"></i>Depot ready</span>
+        </div>
+      </div>
+
+      <!-- Bespoke / Other -->
+      <div class="col-md-6 col-lg-4">
+        <div class="sector-card h-100">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-screwdriver-wrench text-accent fs-4"></i>
+            <h5 class="mb-0">Bespoke and Other</h5>
+          </div>
+          <p>If it is a public sector essential we can usually source it to spec and timescale.</p>
+          <ul class="mini-list">
+            <li>Quote to exact specification</li>
+            <li>Samples on request</li>
+            <li>Short notice options</li>
+          </ul>
+          <span class="badge badge-fit px-2 py-1 mt-1"><i class="fa-solid fa-circle-check me-1"></i>Built to need</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS / RECOGNITION -->
+<section class="py-6 section-accent border-0">
+  <div class="container">
+    <div class="row mb-4 align-items-center">
+      <div class="col-lg-7">
+        <span class="section-divider"></span>
+        <h2 class="fw-bold mb-1 mt-1" style="color:#125f43;">Frameworks and recognition</h2>
+        <p class="text-muted mb-0 fs-6">Aligned to UK procurement. Logos for illustration.</p>
+      </div>
+    </div>
+    <div class="d-flex flex-wrap gap-4 align-items-center py-2">
+      <img src="https://dummyimage.com/160x40/efefef/9aa&text=CCS" alt="Crown Commercial Service" height="44" loading="lazy" decoding="async">
+      <img src="https://dummyimage.com/180x40/efefef/9aa&text=NHS+Supply+Chain" alt="NHS Supply Chain" height="44" loading="lazy" decoding="async">
+      <img src="https://dummyimage.com/140x40/efefef/9aa&text=Gov.uk" alt="Gov.uk" height="44" loading="lazy" decoding="async">
+      <img src="https://dummyimage.com/150x40/efefef/9aa&text=ISO+9001" alt="ISO 9001" height="44" loading="lazy" decoding="async">
+      <img src="https://dummyimage.com/156x40/efefef/9aa&text=Cyber+Essentials" alt="Cyber Essentials" height="44" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5">
+  <div class="container">
+    <div class="p-4 p-md-5 cta shadow">
+      <div class="row align-items-center g-3">
+        <div class="col-lg-8">
+          <h3 class="mb-2"><i class="fa-solid fa-bolt text-accent me-2"></i>Send a quick RFQ</h3>
+          <p class="mb-0 fs-5">Email <a class="text-white" href="mailto:sales@sorellon.com">sales@sorellon.com</a> or request online. We reply within one business day.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="/contact.html" class="btn btn-light btn-lg shadow"><i class="fa-regular fa-envelope me-2"></i>Contact Sorellon</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-4 border-top">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div>
+      <img src="/assets/logo.svg" alt="Sorellon" height="28" class="mb-2" />
+      <p class="mb-0 small">Reliable supply for UK public sector buyers.</p>
+    </div>
+    <div class="small mt-3 mt-md-0">
+      <a href="/privacy.html" class="me-2">Privacy</a>•
+      <a href="/terms.html" class="ms-2">Terms</a>
+      <span class="ms-3">© <span id="y"></span> Sorellon Limited</span>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

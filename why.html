@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Why Sorellon — Sorellon Limited</title>
+  <meta name="description" content="Why UK public sector buyers choose Sorellon: fast RFQs, reliable delivery, audit‑ready compliance, and attentive UK support." />
+  <meta name="theme-color" content="#0b3d2e" />
+  <link rel="canonical" href="https://sorellon.com/why.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Why Sorellon — Reliable Public Sector Supply" />
+  <meta property="og:description" content="Fast. Compliant. No fuss. See why buyers pick Sorellon for dependable essentials and responsive support." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/favicon.png" />
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+  <!-- Vendor CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Site CSS (optional external) -->
+  <link href="/styles.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --forest:#093B33;
+      --forest-2:#14664B;
+      --ink:#0f172a;
+      --bg:#f8faf9;
+      --card:#ffffff;
+      --accent:#1ad09e;
+      --section:#e7f6f0;
+    }
+    html,body{ font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--ink); background:var(--bg); }
+
+    .text-accent{color:var(--accent)!important}
+    .opacity-85{opacity:.85}
+
+    .btn-brand{ background:linear-gradient(90deg, var(--forest-2), var(--forest)); color:#fff;border:none;font-weight:600; box-shadow:0 4px 24px -8px #05493322; transition:box-shadow .2s, transform .2s; }
+    .btn-brand:hover{ background:linear-gradient(90deg, var(--forest), var(--forest-2)); color:#fff;box-shadow:0 6px 28px -8px #05493333; transform:translateY(-1px); }
+    .link-brand{color:var(--forest-2);text-decoration:none}
+    .link-brand:hover{text-decoration:underline}
+
+    /* HERO */
+    .hero{ position:relative;overflow:hidden; background:linear-gradient(112deg, var(--forest, #093B33) 0%, #10664e 70%, #176967 100%); color:#fff; padding:92px 0; display:flex; justify-content:center; }
+    .hero .container{ position:relative;z-index:2;max-width:1040px;width:100%;padding-inline:32px; display:flex;flex-direction:column;gap:.6rem; text-align:center; }
+    .hero-illustration{ position:absolute;inset:0;pointer-events:none; background: radial-gradient(90% 60% at 50% 18%, rgba(26,217,158,0.08), rgba(255,255,255,0) 68%), radial-gradient(75% 42% at 90% 55%, rgba(26,217,158,0.12), rgba(0,0,0,0) 90%), repeating-linear-gradient(120deg, rgba(255,255,255,0.03) 0 3px, transparent 3px 38px); opacity:.25; }
+    .hero h1{ margin:0;font-weight:800;line-height:1.15;font-size:clamp(2.2rem,5vw,3.2rem) }
+    .hero .lead{ font-size:1.25rem;font-weight:500;margin:0 auto; max-width:60ch }
+    .hero-badge{ display:inline-flex;gap:.75rem;align-items:center;padding:.35rem 1rem;border-radius:999px; background:rgba(26,217,158,.09);color:#fff;border:1px solid #fff2;backdrop-filter:blur(2px); font-weight:600;box-shadow:0 2px 8px 0 #0002; }
+
+    /* Cards */
+    .card-lite{ background:var(--card); border:1px solid #e5e7eb; border-radius:1rem; padding:1.5rem; box-shadow:0 8px 32px -12px #05644d1a; transition:box-shadow .2s,border-color .2s; height:100%; }
+    .card-lite:hover{ box-shadow:0 12px 40px -10px #05644d22; border-color:var(--accent); }
+
+    /* Section helpers */
+    .section-accent{ background:var(--section) }
+    .section-divider{ width:32px;height:4px;border-radius:4px;background:var(--accent); display:inline-block;margin:0 0 1.1rem 0 }
+
+    /* Stat chips */
+    .chip{ display:inline-flex;align-items:center;gap:.5rem; border:1px solid #e5e7eb; background:#fff; border-radius:999px; padding:.45rem .8rem; font-weight:600; color:var(--ink); }
+    .chip i{ color:var(--forest-2) }
+
+    /* Timeline */
+    .timeline{ position:relative; }
+    .timeline::before{ content:""; position:absolute; left:22px; top:0; bottom:0; width:2px; background:#e6ece9 }
+    .timeline-step{ position:relative; padding-left:60px; }
+    .timeline-bullet{ position:absolute; left:14px; top:.25rem; width:16px; height:16px; border-radius:999px; background:var(--forest-2); box-shadow:0 0 0 4px #e7f6f0 }
+
+    /* Footer */
+    footer{background:var(--forest);color:#d1eeeb}
+    footer a{color:#e2e8f0;text-decoration:underline}
+    .footer-logo{height:40px;filter:none;margin-bottom:.6rem}
+    .py-6{padding-top:4rem;padding-bottom:4rem}
+
+    @media (max-width:767px){ .hero h1{font-size:2rem} }
+
+    /* NAV active state (scoped) */
+    .navbar .nav-link{font-weight:500}
+    .navbar .nav-link.active,
+    .navbar .nav-link[aria-current="page"]{ font-weight:600; color:var(--forest-2) !important }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container py-2">
+    <a class="navbar-brand d-flex align-items-center" href="/index.html">
+      <img src="/assets/logo.svg" alt="Sorellon" height="35" class="me-2" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/sectors.html">Sectors</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/capabilities.html">Capabilities</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold active" aria-current="page" href="/why.html">Why Sorellon</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/contact.html">Contact</a></li>
+      </ul>
+      <a href="/contact.html" class="btn btn-brand ms-lg-3 shadow-sm"><i class="fa-solid fa-arrow-right-to-bracket me-2"></i>Request a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO (centered) -->
+<section class="hero position-relative">
+  <div class="hero-illustration"></div>
+  <div class="container">
+    <span class="hero-badge mx-auto mb-3">
+      <i class="fa-solid fa-bolt text-accent me-1"></i> Fast. Compliant. No fuss.
+    </span>
+    <h1 class="display-5">Why buyers choose Sorellon</h1>
+    <p class="lead">End‑to‑end sourcing and delivery designed for the UK public sector: rapid quotations, audit‑ready documentation, and a named UK contact from RFQ to receipt.</p>
+    <div class="d-flex gap-2 flex-wrap justify-content-center mt-2">
+      <span class="chip"><i class="fa-regular fa-clock"></i> 24h quotes</span>
+      <span class="chip"><i class="fa-solid fa-user-headset"></i> UK support</span>
+      <span class="chip"><i class="fa-solid fa-file-shield"></i> Compliance handled</span>
+      <span class="chip"><i class="fa-solid fa-truck-fast"></i> Reliable delivery</span>
+    </div>
+  </div>
+</section>
+
+<!-- 4 Reasons -->
+<section class="py-6">
+  <div class="container">
+    <div class="row mb-4 align-items-end">
+      <div class="col-lg-8">
+        <span class="section-divider"></span>
+        <h2 class="fw-bold mb-1 mt-1" style="color:#125f43;">The Sorellon difference</h2>
+        <p class="text-muted mb-0">Simple products, serious delivery — built around the realities of public procurement.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card-lite h-100">
+          <div class="d-flex align-items-center mb-2"><i class="fa-regular fa-clock me-2 text-accent"></i><h6 class="mb-0 fw-bold" style="color:#14664B;">Rapid RFQs</h6></div>
+          <p class="mb-0 text-muted">Clear specs, pricing, and lead times within one business day — so you can keep projects moving.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-lite h-100">
+          <div class="d-flex align-items-center mb-2"><i class="fa-solid fa-file-shield me-2 text-accent"></i><h6 class="mb-0 fw-bold" style="color:#14664B;">Audit‑ready</h6></div>
+          <p class="mb-0 text-muted">UKCA/CE, EN standards, SDS, lot traceability and import docs packaged with every order.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-lite h-100">
+          <div class="d-flex align-items-center mb-2"><i class="fa-solid fa-handshake-simple me-2 text-accent"></i><h6 class="mb-0 fw-bold" style="color:#14664B;">Procurement fit</h6></div>
+          <p class="mb-0 text-muted">Framework‑aligned terms, fair value, and consistent communication — no surprises.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-lite h-100">
+          <div class="d-flex align-items-center mb-2"><i class="fa-solid fa-user-headset me-2 text-accent"></i><h6 class="mb-0 fw-bold" style="color:#14664B;">Named contact</h6></div>
+          <p class="mb-0 text-muted">You get a single UK contact from RFQ through delivery — not a call centre.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Proof / Stats -->
+<section class="py-6 section-accent border-0">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <span class="section-divider"></span>
+        <h3 class="fw-bold mb-2" style="color:#125f43;">Built for public sector buyers</h3>
+        <p class="text-muted">We focus on high‑volume essentials with predictable supply chains: wipes, janitorial kits, cleaning consumables, and selected healthcare items.</p>
+        <ul class="list-unstyled m-0">
+          <li class="mb-2"><i class="fa-solid fa-check text-accent me-2"></i> Multi‑site UK delivery and repeat supply</li>
+          <li class="mb-2"><i class="fa-solid fa-check text-accent me-2"></i> Private‑label and custom kit options</li>
+          <li class="mb-2"><i class="fa-solid fa-check text-accent me-2"></i> Supplier due‑diligence and factory QA</li>
+          <li class="mb-2"><i class="fa-solid fa-check text-accent me-2"></i> Transparent incoterms and freight plans</li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-3 text-center">
+          <div class="col-6">
+            <div class="card-lite py-4">
+              <div class="display-6 fw-bold" style="color:#14664B;">24h</div>
+              <div class="text-muted">Quote turnaround</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card-lite py-4">
+              <div class="display-6 fw-bold" style="color:#14664B;">UK</div>
+              <div class="text-muted">Named support</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card-lite py-4">
+              <div class="display-6 fw-bold" style="color:#14664B;">EN</div>
+              <div class="text-muted">Standards & SDS</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card-lite py-4">
+              <div class="display-6 fw-bold" style="color:#14664B;">QA</div>
+              <div class="text-muted">Supplier vetting</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How we work -->
+<section class="py-6">
+  <div class="container">
+    <div class="row mb-4 align-items-end">
+      <div class="col-lg-8">
+        <span class="section-divider"></span>
+        <h2 class="fw-bold mb-1 mt-1" style="color:#125f43;">How we work</h2>
+        <p class="text-muted mb-0">A lightweight process that gets you exactly what you need — and nothing you don’t.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-step mb-4">
+        <div class="timeline-bullet"></div>
+        <h6 class="mb-1 fw-bold" style="color:#14664B;"><i class="fa-regular fa-envelope me-2 text-accent"></i> 1) Send an RFQ</h6>
+        <p class="text-muted mb-0">Share product, volume, and delivery dates. We clarify specs up‑front so your quote is decision‑ready.</p>
+      </div>
+      <div class="timeline-step mb-4">
+        <div class="timeline-bullet"></div>
+        <h6 class="mb-1 fw-bold" style="color:#14664B;"><i class="fa-solid fa-clipboard-list me-2 text-accent"></i> 2) Quote & compliance pack</h6>
+        <p class="text-muted mb-0">Pricing, lead times, UKCA/CE, EN standards, SDS, and import documentation — packaged for easy sign‑off.</p>
+      </div>
+      <div class="timeline-step mb-4">
+        <div class="timeline-bullet"></div>
+        <h6 class="mb-1 fw-bold" style="color:#14664B;"><i class="fa-solid fa-truck me-2 text-accent"></i> 3) Delivery & updates</h6>
+        <p class="text-muted mb-0">Proactive status updates from a named UK contact. Multi‑site delivery and repeat orders supported.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compliance & Documentation -->
+<section class="py-6 section-accent border-0">
+  <div class="container">
+    <div class="row mb-4 align-items-end">
+      <div class="col-lg-8">
+        <span class="section-divider"></span>
+        <h2 class="fw-bold mb-1 mt-1" style="color:#125f43;">Compliance & documentation</h2>
+        <p class="text-muted mb-0">Everything you need for procurement, assurance, and audit — in one place.</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card-lite h-100">
+          <h6 class="fw-bold mb-2" style="color:#14664B;"><i class="fa-solid fa-shield-halved me-2 text-accent"></i> Standards</h6>
+          <ul class="m-0 ps-3 text-muted">
+            <li>EN1276, EN14476 and relevant EN/BS standards</li>
+            <li>UKCA/CE conformity</li>
+            <li>SDS and technical datasheets</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card-lite h-100">
+          <h6 class="fw-bold mb-2" style="color:#14664B;"><i class="fa-solid fa-file-contract me-2 text-accent"></i> Documentation</h6>
+          <ul class="m-0 ps-3 text-muted">
+            <li>Certificates, test reports, lot traceability</li>
+            <li>Import compliance and customs paperwork</li>
+            <li>Factory QA and due‑diligence checks</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card-lite h-100">
+          <h6 class="fw-bold mb-2" style="color:#14664B;"><i class="fa-solid fa-building-columns me-2 text-accent"></i> Procurement fit</h6>
+          <ul class="m-0 ps-3 text-muted">
+            <li>Transparent pricing and terms</li>
+            <li>Framework‑aligned delivery options</li>
+            <li>Responsive UK point of contact</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5">
+  <div class="container">
+    <div class="p-4 p-md-5 cta shadow" style="background:linear-gradient(90deg,#023822 10%, #06b687 100%);color:#fff;border-radius:18px;box-shadow:0 4px 32px -11px #012f2524">
+      <div class="row align-items-center g-3">
+        <div class="col-lg-8">
+          <h3 class="mb-2"><i class="fa-solid fa-bolt text-accent me-2"></i>Ready for a quick quote?</h3>
+          <p class="mb-0 fs-5">Email <a class="text-white" href="mailto:sales@sorellon.com">sales@sorellon.com</a> or request online — get a human reply within <b>1 business day</b>.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="/contact.html" class="btn btn-light btn-lg shadow"><i class="fa-regular fa-envelope me-2"></i>Contact Sorellon</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-4 border-top">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div>
+      <img src="/assets/logo.svg" alt="Sorellon" height="28" class="mb-2" />
+      <p class="mb-0 small">Reliable supply for UK public sector buyers.</p>
+    </div>
+    <div class="small mt-3 mt-md-0">
+      <a href="/privacy.html" class="me-2">Privacy</a>•
+      <a href="/terms.html" class="ms-2">Terms</a>
+      <span class="ms-3">© <span id="y"></span> Sorellon Limited</span>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Year stamp
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

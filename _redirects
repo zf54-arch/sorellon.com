@@ -1,0 +1,34 @@
+# Force HTTPS + apex
+http://sorellon.com/*       https://sorellon.com/:splat   301!
+http://www.sorellon.com/*   https://sorellon.com/:splat   301!
+https://www.sorellon.com/*  https://sorellon.com/:splat   301!
+
+# Clean URLs (no .html in the bar)
+/contact                    /contact.html                  200
+/capabilities               /capabilities.html             200
+/sectors                    /sectors.html                  200
+/why                        /why.html                      200
+/privacy                    /privacy.html                  200
+/terms                      /terms.html                    200
+/capability-statement       /capability-statement.html     200
+/capability-statement/      /capability-statement.html     200
+
+# Canonicalise .html → clean (avoid duplicates)
+/contact.html               /contact                        301
+/capabilities.html          /capabilities                   301
+/sectors.html               /sectors                        301
+/why.html                   /why                            301
+/privacy.html               /privacy                        301
+/terms.html                 /terms                          301
+/capability-statement.html  /capability-statement           301
+
+# PDF short links → actual files (specific rules; keep ABOVE fallback)
+/capability-statement.pdf   /assets/policies/Sorellon-Capability-Statement.pdf         200
+/privacy.pdf                /assets/policies/Sorellon-Privacy-Policy.pdf               200
+/terms.pdf                  /assets/policies/Sorellon-Terms-and-Conditions.pdf         200
+
+# Assets
+/assets/*                   /assets/:splat                  200
+
+# SPA fallback LAST
+/*                          /index.html                     200
