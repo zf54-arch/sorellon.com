@@ -14,7 +14,9 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "favicons": "^7.2.0",
     "http-server": "^14.1.1",
-    "puppeteer": "^24.26.1"
+    "puppeteer": "^24.26.1",
+    "pwa-asset-generator": "^8.1.2"
   }
 }
