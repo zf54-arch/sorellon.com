@@ -111,6 +111,45 @@ html, body {
   color: var(--forest-2) !important;
 }
 
+/* Nav link separator: / fades to → on hover (mlp.com-style) */
+.nav-link .nav-sep {
+  display: inline-block;
+  position: relative;
+  margin-left: 3px;
+  width: 0.9em;
+  font-weight: 300;
+  opacity: 0.38;
+  transition: opacity 0.2s ease;
+  vertical-align: baseline;
+}
+.nav-link .nav-sep::before {
+  content: '/';
+  display: inline-block;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+.nav-link .nav-sep::after {
+  content: '→';
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  font-weight: 400;
+}
+.nav-link:hover .nav-sep,
+.nav-link.active .nav-sep,
+.nav-link[aria-current] .nav-sep {
+  opacity: 1;
+}
+.nav-link:hover .nav-sep::before {
+  opacity: 0;
+  transform: translateX(5px);
+}
+.nav-link:hover .nav-sep::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /* Inner page navbar */
 .navbar--inner {
   background: #fff;
@@ -466,8 +505,8 @@ html, body {
   box-shadow: 0 4px 32px -11px rgba(1,47,37,0.15);
 }
 .cta-banner h3 { font-weight: 700; font-size: clamp(1.5rem, 3vw, 2rem) }
-.cta-banner a:not(.btn) { color: #fff; text-decoration: underline }
-.cta-banner a:not(.btn):hover { text-decoration: none }
+.cta-banner a:not(.btn) { color: #fff !important; text-decoration: none !important; font-weight: 600; }
+.cta-banner a:not(.btn):hover { text-decoration: underline !important; }
 /* Legacy .cta class compatibility */
 .cta {
   background: linear-gradient(90deg,#023822 10%, #06b687 100%);

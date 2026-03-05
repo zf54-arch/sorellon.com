@@ -51,10 +51,10 @@
     </button>
     <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
-        <li class="nav-item"><a class="nav-link fw-semibold" href="/sectors.html" id="nav-sectors">Sectors</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="/capabilities.html" id="nav-capabilities">Capabilities</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="/why.html">Why Sorellon</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="/contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/sectors.html" id="nav-sectors">Sectors<span class="nav-sep"></span></a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/capabilities.html" id="nav-capabilities">Capabilities<span class="nav-sep"></span></a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/why.html">Why Sorellon<span class="nav-sep"></span></a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/contact.html">Contact<span class="nav-sep"></span></a></li>
       </ul>
       <a href="/contact.html" class="btn btn-cta btn-cta--primary btn-sm ms-lg-3">Request a Quote <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
     </div>
@@ -221,7 +221,7 @@
       <div class="row align-items-center g-3">
         <div class="col-lg-8">
           <h3 class="mb-2"><i class="fa-solid fa-bolt me-2" style="color:var(--accent)"></i>Need a rapid quote?</h3>
-          <p class="mb-0 fs-5">Email <a href="mailto:sales@sorellon.com">sales@sorellon.com</a> or request online — reply within <strong>1 business day</strong>.</p>
+          <p class="mb-0">Email <a href="mailto:sales@sorellon.com">sales@sorellon.com</a> — we reply within <strong>one business day</strong>.</p>
         </div>
         <div class="col-lg-4 text-lg-end">
           <a href="/contact.html" class="btn btn-cta btn-cta--light">Contact Sorellon <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
@@ -315,7 +315,7 @@
   reveals.forEach(function(el) { observer.observe(el); });
 })();
 
-// ===== Canvas Wave Animation =====
+// ===== Vector Field Animation =====
 (function() {
   var canvas = document.getElementById('heroCanvas');
   if (!canvas) return;
@@ -366,102 +366,138 @@
     return 70 * (n0 + n1 + n2);
   }
 
-  // ---- Animation config ----
+  // ---- Config ----
   var isMobile = window.innerWidth < 768;
-  var LINE_COUNT = isMobile ? 7 : 12;
-  var POINT_COUNT = isMobile ? 80 : 140;
-  var MOUSE_RADIUS = 0.18;
-  var MOUSE_STRENGTH = 45;
-  var width, height, mouseX = 0.5, mouseY = 0.5;
+  var SPACING    = isMobile ? 28  : 35;
+  var DASH_HALF  = isMobile ? 7   : 10;
+  var FREQ       = 0.0022;   // spatial noise frequency for angle
+  var FREQ2      = 0.0016;   // secondary noise for accent colour
+  var TIME_SPEED = 0.0022;   // animation speed
+  var MOUSE_EASE = 0.065;    // mouse lerp factor
+  var VORTEX_R   = 175;      // pixel radius of mouse influence
+  var VORTEX_PULL = 0.72;    // how strongly mouse orients dashes (0–1)
+  var width, height, cols, rows;
+  var colorMap = [];         // precomputed per-cell accent flag
+  var mouseX = 0.5, mouseY = 0.5;
+  var targetMouseX = 0.5, targetMouseY = 0.5;
   var time = 0;
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Precompute which cells are "accent" — only recalculate on resize
+  function buildColorMap() {
+    colorMap = [];
+    for (var r = 0; r <= rows; r++) {
+      for (var c = 0; c <= cols; c++) {
+        var px = c * SPACING - SPACING * 0.5;
+        var py = r * SPACING - SPACING * 0.5;
+        colorMap.push(noise2D(px * FREQ2 + 40.5, py * FREQ2 + 80.3) > 0.28);
+      }
+    }
+  }
 
   function resize() {
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
     var rect = canvas.getBoundingClientRect();
-    width = rect.width;
+    width  = rect.width;
     height = rect.height;
-    canvas.width = width * dpr;
+    canvas.width  = width  * dpr;
     canvas.height = height * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    cols = Math.ceil(width  / SPACING) + 2;
+    rows = Math.ceil(height / SPACING) + 2;
+    buildColorMap();
   }
 
   function draw() {
+    // Smooth mouse easing
+    mouseX += (targetMouseX - mouseX) * MOUSE_EASE;
+    mouseY += (targetMouseY - mouseY) * MOUSE_EASE;
+
     ctx.clearRect(0, 0, width, height);
 
     // Background gradient
-    var grad = ctx.createLinearGradient(0, 0, width * 0.3, height);
-    grad.addColorStop(0, '#093B33');
-    grad.addColorStop(0.6, '#0e5c46');
-    grad.addColorStop(1, '#156460');
+    var grad = ctx.createLinearGradient(0, 0, width * 0.4, height);
+    grad.addColorStop(0,    '#083530');
+    grad.addColorStop(0.55, '#0d4e3e');
+    grad.addColorStop(1,    '#125850');
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, width, height);
 
-    // Subtle radial glow
-    var glow = ctx.createRadialGradient(width * 0.6, height * 0.3, 0, width * 0.6, height * 0.3, width * 0.6);
-    glow.addColorStop(0, 'rgba(26,208,158,0.06)');
-    glow.addColorStop(1, 'rgba(26,208,158,0)');
-    ctx.fillStyle = glow;
-    ctx.fillRect(0, 0, width, height);
+    ctx.lineCap = 'round';
 
-    // Draw wave lines
-    for (var i = 0; i < LINE_COUNT; i++) {
-      var progress = i / (LINE_COUNT - 1);
-      var baseY = height * 0.1 + height * 0.8 * progress;
-      var isAccent = i % 4 === 1;
-      var alpha = isAccent ? 0.18 + Math.sin(time * 0.5 + i) * 0.04 : 0.06 + progress * 0.08;
-      var lineWidth = isAccent ? 1.8 : 0.8 + progress * 0.7;
+    var mx  = mouseX  * width;
+    var my  = mouseY  * height;
+    var vr2 = VORTEX_R * VORTEX_R;
+    var idx = 0;
 
-      ctx.beginPath();
-      ctx.strokeStyle = isAccent
-        ? 'rgba(26,208,158,' + alpha + ')'
-        : 'rgba(255,255,255,' + alpha + ')';
-      ctx.lineWidth = lineWidth;
+    for (var row = 0; row <= rows; row++) {
+      for (var col = 0; col <= cols; col++) {
+        var x = col * SPACING - SPACING * 0.5;
+        var y = row * SPACING - SPACING * 0.5;
 
-      for (var j = 0; j <= POINT_COUNT; j++) {
-        var x = (j / POINT_COUNT) * width;
-        var noiseFreq = 0.006 + progress * 0.002;
-        var noiseVal = noise2D(j * noiseFreq + time * 0.25 + i * 0.3, i * 1.8 + time * 0.08);
-        var amplitude = 35 + i * 8;
-        var y = baseY + noiseVal * amplitude;
+        // Flow angle from simplex noise (slow temporal drift)
+        var n     = noise2D(x * FREQ + time * 0.18, y * FREQ + time * 0.09);
+        var angle = n * Math.PI * 3.0;
 
-        // Mouse displacement
-        var dx = (x / width) - mouseX;
-        var dy = (baseY / height) - mouseY;
-        var dist2 = dx * dx + dy * dy;
-        var mouseEffect = Math.exp(-dist2 / (MOUSE_RADIUS * MOUSE_RADIUS));
-        y += mouseEffect * MOUSE_STRENGTH * Math.sin(time * 2 + i * 0.7);
+        // Mouse vortex: orient dashes near cursor toward it
+        var dx = x - mx, dy = y - my;
+        var d2   = dx * dx + dy * dy;
+        var infl = 0;
+        if (d2 < vr2 * 4) {
+          infl = Math.exp(-d2 / vr2);
+          var toMouse = Math.atan2(my - y, mx - x);
+          var diff = toMouse - angle;
+          // Wrap to [-PI, PI]
+          diff = diff - Math.PI * 2 * Math.round(diff / (Math.PI * 2));
+          angle += diff * infl * VORTEX_PULL;
+        }
 
-        if (j === 0) ctx.moveTo(x, y);
-        else ctx.lineTo(x, y);
+        // Dash geometry
+        var dashLen = DASH_HALF * (1 + infl * 0.5);
+        var cos = Math.cos(angle) * dashLen;
+        var sin = Math.sin(angle) * dashLen;
+
+        // Colour: accent teal (~37%) vs soft white
+        var isAccent = colorMap[idx++];
+        var alpha, lw;
+        if (isAccent) {
+          alpha = 0.22 + infl * 0.42;
+          lw    = 1.1  + infl * 0.7;
+          ctx.strokeStyle = 'rgba(26,208,158,' + alpha + ')';
+        } else {
+          alpha = 0.09 + infl * 0.20;
+          lw    = 0.85 + infl * 0.5;
+          ctx.strokeStyle = 'rgba(255,255,255,' + alpha + ')';
+        }
+
+        ctx.lineWidth = lw;
+        ctx.beginPath();
+        ctx.moveTo(x - cos, y - sin);
+        ctx.lineTo(x + cos, y + sin);
+        ctx.stroke();
       }
-      ctx.stroke();
     }
 
-    time += 0.004;
-
-    if (!prefersReducedMotion) {
-      requestAnimationFrame(draw);
-    }
+    time += TIME_SPEED;
+    if (!prefersReducedMotion) requestAnimationFrame(draw);
   }
 
-  // Event listeners
   window.addEventListener('resize', function() {
-    isMobile = window.innerWidth < 768;
-    LINE_COUNT = isMobile ? 7 : 12;
-    POINT_COUNT = isMobile ? 80 : 140;
+    isMobile   = window.innerWidth < 768;
+    SPACING    = isMobile ? 28 : 35;
+    DASH_HALF  = isMobile ? 7  : 10;
     resize();
   });
 
   canvas.addEventListener('mousemove', function(e) {
     var rect = canvas.getBoundingClientRect();
-    mouseX = (e.clientX - rect.left) / rect.width;
-    mouseY = (e.clientY - rect.top) / rect.height;
+    targetMouseX = (e.clientX - rect.left) / rect.width;
+    targetMouseY = (e.clientY - rect.top)  / rect.height;
   });
 
   canvas.addEventListener('mouseleave', function() {
-    mouseX = 0.5;
-    mouseY = 0.5;
+    targetMouseX = 0.5;
+    targetMouseY = 0.5;
   });
 
   // Start
