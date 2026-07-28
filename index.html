@@ -3,38 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sorellon Limited — Reliable Public Sector Supply</title>
-  <meta name="description" content="Sorellon Limited supplies reliable, value-for-money goods to UK public sector buyers. Fast sourcing, compliant delivery, and responsive support." />
+  <title>Sorellon Limited — Goods Supply for UK Public-Sector Buyers</title>
+  <meta name="description" content="Sorellon supplies cleaning, hygiene, healthcare and maintenance goods to UK public-sector buyers. Clear quotes, product evidence and multi-site delivery." />
 
   <meta name="theme-color" content="#0b3d2e" />
 <!-- Favicon & PWA -->
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-<link rel="manifest" href="/assets/icons/site.webmanifest">
-<link rel="icon" href="/assets/icons/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="canonical" href="https://sorellon.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Sorellon Limited — Reliable Public Sector Supply" />
-  <meta property="og:description" content="Simple, high-volume essentials with tight lead times and responsive support." />
+  <meta property="og:title" content="Sorellon Limited — Goods Supply for UK Public-Sector Buyers" />
+  <meta property="og:description" content="Cleaning, hygiene, healthcare and maintenance goods quoted to your specification." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/favicon.png" />
 
   <link rel="icon" type="image/png" href="/favicon.png" />
 
   <!-- Preconnects before fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
   <!-- Vendor CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="/assets/vendor/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'" />
 
   <link href="/assets/styles.css" rel="stylesheet" />
 </head>
@@ -43,25 +39,26 @@
 <!-- NAV (transparent, fixed over hero) -->
 <nav class="navbar navbar-expand-lg navbar--transparent" id="mainNav">
   <div class="container py-2">
-    <a class="navbar-brand d-flex align-items-center" href="/index.html">
-      <img src="/assets/logo-white.svg" alt="Sorellon" height="35" class="me-2" id="navLogo" />
+    <a class="navbar-brand d-flex align-items-center" href="/">
+      <img src="/assets/logo-white.svg" alt="Sorellon" width="130" height="35" class="me-2" id="navLogo" />
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
-        <li class="nav-item"><a class="nav-link fw-semibold" href="/sectors.html" id="nav-sectors">Sectors<span class="nav-sep"></span></a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="/capabilities.html" id="nav-capabilities">Capabilities<span class="nav-sep"></span></a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="/china-sourcing">China sourcing<span class="nav-sep"></span></a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="/why.html">Why Sorellon<span class="nav-sep"></span></a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="/contact.html">Contact<span class="nav-sep"></span></a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/public-sector">Public Sector<span class="nav-sep"></span></a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/sectors">Sectors<span class="nav-sep"></span></a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/capabilities">Capabilities<span class="nav-sep"></span></a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/about">About<span class="nav-sep"></span></a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/contact">Contact<span class="nav-sep"></span></a></li>
       </ul>
-      <a href="/contact.html" class="btn btn-cta btn-cta--primary btn-sm ms-lg-3">Request a Quote <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+      <a href="/contact" class="btn btn-cta btn-cta--primary btn-sm ms-lg-3">Request a Quote <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
     </div>
   </div>
 </nav>
 
+<main>
 <!-- HERO -->
 <section class="hero hero--home" id="hero">
   <canvas id="heroCanvas" class="hero-canvas" role="presentation" aria-hidden="true"></canvas>
@@ -69,31 +66,31 @@
   <div class="container">
     <div class="hero-content">
       <span class="hero-badge mb-3">
-        <span class="seg"><i class="fa-solid fa-crown me-1"></i>Crown Commercial</span>
-        <span class="seg"><i class="fa-solid fa-heart-pulse me-1"></i>NHS</span>
-        <span class="seg"><i class="fa-solid fa-building-columns me-1"></i>Local Authorities</span>
+        <span class="seg"><i class="fa-solid fa-building-columns me-1"></i>UK public sector</span>
+        <span class="seg"><i class="fa-solid fa-boxes-stacked me-1"></i>Goods supply</span>
+        <span class="seg"><i class="fa-solid fa-location-dot me-1"></i>UK-based SME</span>
       </span>
       <h1>
-        Reliable public&#8209;sector supply.<br>
-        <span style="color:var(--accent)">Built for precision.</span>
+        Goods supply for UK<br>
+        <span style="color:var(--accent)">public-sector buyers.</span>
       </h1>
       <p class="lead">
-        High-volume essentials for the UK public sector. Speedy sourcing,
-        attentive support, and unwavering compliance.
+        Cleaning, hygiene, healthcare and maintenance products quoted to your
+        specification. Clear lead times. Product evidence where required.
       </p>
       <div class="d-flex gap-3 flex-wrap justify-content-center">
-        <a href="/contact.html" class="btn btn-cta btn-cta--accent btn-lg">
+        <a href="/contact" class="btn btn-cta btn-cta--accent btn-lg">
           <i class="fa-regular fa-envelope me-2"></i>Start an RFQ <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
         </a>
-        <a href="/capability-statement.html" class="btn btn-cta btn-cta--outline-light btn-lg">
+        <a href="/capability-statement" class="btn btn-cta btn-cta--outline-light btn-lg">
           <i class="fa-regular fa-file-lines me-2"></i>Capability Statement <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
         </a>
       </div>
       <div class="mt-4 small" style="color:rgba(255,255,255,0.65);">
         <span><i class="fa-solid fa-circle-dot me-1"></i>SME</span>
         <span class="ms-3"><i class="fa-solid fa-location-dot me-1"></i>UK-based</span>
-        <span class="ms-3"><i class="fa-solid fa-bolt-lightning me-1"></i>Rapid quotations</span>
-        <span class="ms-3"><i class="fa-solid fa-file-shield me-1"></i>Import compliance handled</span>
+        <span class="ms-3"><i class="fa-solid fa-bolt-lightning me-1"></i>24-hour quote target</span>
+        <span class="ms-3"><i class="fa-solid fa-truck me-1"></i>Multi-site delivery</span>
       </div>
     </div>
   </div>
@@ -104,90 +101,41 @@
   </div>
 </section>
 
-<!-- FAST RFQ (floating card) -->
+<!-- EMAIL RFQ (floating card) -->
 <section class="rfq-section">
   <div class="container" style="max-width:720px;">
     <div class="rfq-card reveal">
-      <h5 class="mb-3 text-center"><i class="fa-solid fa-bolt text-accent me-1"></i>Fast RFQ</h5>
-      <form name="rfq" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="rfq">
-        <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
-        <div class="mb-2">
-          <label class="form-label" for="product">What do you need?</label>
-          <input type="text" class="form-control" id="product" name="product" placeholder="e.g. 5,000x disinfectant wipes, EN1276" autocomplete="off" required>
-        </div>
-        <div class="row g-2">
-          <div class="col-6">
-            <label class="form-label" for="quantity">Quantity</label>
-            <input type="number" class="form-control" id="quantity" name="quantity" placeholder="5000" min="1" step="1" inputmode="numeric" autocomplete="off" required>
-          </div>
-          <div class="col-6">
-            <label class="form-label" for="date">Needed by</label>
-            <input type="date" class="form-control" id="date" name="date">
-          </div>
-        </div>
-        <div class="mb-2 mt-2">
-          <label class="form-label" for="email">Your email</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="you@org.gov.uk" required autocomplete="email">
-        </div>
-        <button type="submit" class="btn btn-cta btn-cta--primary w-100 mt-3 justify-content-center">Get a Quote <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span></button>
-        <p class="small text-muted mt-2 mb-0 text-center"><i class="fa-solid fa-clock me-1"></i>We'll respond within one business day.</p>
-      </form>
+      <h2 class="h5 mb-2 text-center"><i class="fa-regular fa-envelope text-accent me-1"></i>Send an RFQ by email</h2>
+      <p class="text-muted text-center mb-3">Include the product, quantity, delivery points, required date and any standards or test evidence needed.</p>
+      <a href="mailto:sorellonltd@gmail.com?subject=RFQ%20-%20organisation%20name" class="btn btn-cta btn-cta--primary w-100 justify-content-center">Email sorellonltd@gmail.com <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+      <p class="small text-muted mt-2 mb-0 text-center"><i class="fa-solid fa-clock me-1"></i>Target reply within one business day.</p>
     </div>
   </div>
 </section>
 
-<!-- CHINA SOURCING SPRINT -->
+<!-- Public-sector buying -->
 <section class="py-6 section-accent border-0">
   <div class="container">
     <div class="row g-4 align-items-center">
       <div class="col-lg-7 reveal">
         <span class="section-divider"></span>
-        <p class="text-uppercase small fw-bold mb-2" style="letter-spacing:.12em;color:var(--forest-2);">For UK importers and small brands</p>
-        <h2 class="fw-bold mb-3" style="color:#125f43;">Test a China supplier route for £29</h2>
-        <p class="text-muted fs-5 mb-3">Send one clear product brief. Sorellon returns a desk-researched shortlist of three candidate suppliers with indicative MOQ, pricing, evidence gaps and a provisional UK landed-cost comparison.</p>
-        <div class="d-flex flex-wrap gap-2 mb-3">
-          <span class="badge rounded-pill text-bg-light border px-3 py-2">3 candidate suppliers</span>
-          <span class="badge rounded-pill text-bg-light border px-3 py-2">MOQ &amp; pricing</span>
-          <span class="badge rounded-pill text-bg-light border px-3 py-2">Compliance flags</span>
-          <span class="badge rounded-pill text-bg-light border px-3 py-2">Landed-cost assumptions</span>
-        </div>
-        <p class="small text-muted mb-0">Founding-client price for one product brief. No goods purchase is included.</p>
+        <h2 class="fw-bold mb-3 mt-1" style="color:#125f43;">Built around the buyer's specification</h2>
+        <p class="text-muted fs-5 mb-3">Send the product, volume, delivery points and required standards. We return price, lead time, assumptions and the evidence available for the proposed product.</p>
+        <p class="text-muted mb-0">We source through a vetted global supplier network. We do not substitute products or claim standards without supporting documents.</p>
       </div>
-      <div class="col-lg-5 reveal" style="transition-delay:.1s">
-        <div class="card-lite shadow-sm" style="padding:2rem;">
-          <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
-            <div>
-              <h3 class="h4 fw-bold mb-1" style="color:var(--forest-2);">Supplier Shortlist Sprint</h3>
-              <p class="text-muted mb-0">Initial comparison within 3 business days after payment.</p>
-            </div>
-            <span class="badge rounded-pill px-3 py-2" style="background:var(--forest-2);color:#fff;">£29 fixed</span>
-          </div>
-          <a href="/china-sourcing" class="btn btn-cta btn-cta--primary w-100 justify-content-center">
-            See the exact scope <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-          </a>
+      <div class="col-lg-5 reveal">
+        <div class="card-lite">
+          <h3 class="h5 fw-bold mb-3" style="color:var(--forest-2);">Useful at first review</h3>
+          <ul class="check-list mb-0">
+            <li>Company and contact details</li>
+            <li>Product declarations and test evidence where applicable</li>
+            <li>SDS and lot traceability where applicable</li>
+            <li>Delivery plan and named UK contact</li>
+            <li>Public policies and current readiness status</li>
+          </ul>
+          <a href="/public-sector" class="link-brand d-inline-block mt-3 fw-semibold">Public-sector information <i class="fa-solid fa-arrow-right ms-1"></i></a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Procurement Readiness -->
-<section class="py-6 section-accent border-0">
-  <div class="container">
-    <div class="row mb-4 align-items-center reveal">
-      <div class="col-lg-7">
-        <span class="section-divider"></span>
-        <h2 class="fw-bold mb-1 mt-1" style="color:#125f43;">Procurement readiness</h2>
-        <p class="text-muted mb-0 fs-6">Registered across core tender portals. Certifications are named only where independently held.</p>
-      </div>
-    </div>
-    <div class="d-flex flex-wrap gap-3 align-items-center py-2 reveal">
-      <span class="badge rounded-pill text-bg-light border px-3 py-2">Find a Tender</span>
-      <span class="badge rounded-pill text-bg-light border px-3 py-2">Contracts Finder</span>
-      <span class="badge rounded-pill text-bg-light border px-3 py-2">Public Contracts Scotland</span>
-      <span class="badge rounded-pill text-bg-light border px-3 py-2">Sell2Wales</span>
-      <span class="badge rounded-pill text-bg-light border px-3 py-2">Documented policy pack</span>
     </div>
   </div>
 </section>
@@ -198,51 +146,51 @@
     <div class="row mb-4 align-items-end reveal">
       <div class="col-lg-8">
         <span class="section-divider"></span>
-        <h2 class="fw-bold mb-1 mt-1" style="color:#125f43;">Example Product Categories</h2>
-        <p class="text-muted mb-0">Below are examples — we quote to your exact specification, from UK/EU or trusted global suppliers.</p>
+        <h2 class="fw-bold mb-1 mt-1" style="color:#125f43;">Product categories</h2>
+        <p class="text-muted mb-0">Examples only. Each quote is built against the buyer's specification.</p>
       </div>
     </div>
     <div class="row g-4">
       <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.05s">
         <div class="product-card h-100 shadow-sm">
-          <h6 class="mb-1"><i class="fa-solid fa-spray-can-sparkles me-2 text-accent"></i>Surface wipes (EN1276/EN14476)</h6>
-          <p class="mb-2">Bulk tubs &amp; sachets, private label options, multi-site delivery across the UK.</p>
-          <span class="badge mb-2"><i class="fa-solid fa-circle-info me-1"></i>Available on short notice</span>
+          <h3 class="h6 mb-1"><i class="fa-solid fa-spray-can-sparkles me-2 text-accent"></i>Surface wipes (EN1276/EN14476)</h3>
+          <p class="mb-2">Bulk tubs and sachets. Product evidence checked against the stated requirement.</p>
+          <span class="badge mb-2"><i class="fa-solid fa-circle-info me-1"></i>Specification-led</span>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.1s">
         <div class="product-card h-100 shadow-sm">
-          <h6 class="mb-1"><i class="fa-solid fa-broom-ball me-2 text-accent"></i>Janitorial kits</h6>
-          <p class="mb-2">Rollers, trays, cloths, sacks &amp; signage supplied as site-ready bundles.</p>
-          <span class="badge mb-2"><i class="fa-solid fa-circle-info me-1"></i>Customisable kits</span>
+          <h3 class="h6 mb-1"><i class="fa-solid fa-broom-ball me-2 text-accent"></i>Janitorial kits</h3>
+          <p class="mb-2">Cloths, sacks, signs, cleaning tools and site-ready bundles.</p>
+          <span class="badge mb-2"><i class="fa-solid fa-circle-info me-1"></i>Custom kit lists</span>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.15s">
         <div class="product-card h-100 shadow-sm">
-          <h6 class="mb-1"><i class="fa-solid fa-hand-holding-medical me-2 text-accent"></i>Healthcare consumables</h6>
-          <p class="mb-2">Syringes, catheters, PPE; UKCA/CE compliance &amp; lot traceability provided.</p>
-          <span class="badge mb-2"><i class="fa-solid fa-circle-info me-1"></i>NHS and Trust-ready</span>
+          <h3 class="h6 mb-1"><i class="fa-solid fa-hand-holding-medical me-2 text-accent"></i>Healthcare consumables</h3>
+          <p class="mb-2">PPE and clinical consumables where the required product evidence is available.</p>
+          <span class="badge mb-2"><i class="fa-solid fa-circle-info me-1"></i>Evidence checked per product</span>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.2s">
         <div class="product-card h-100 shadow-sm">
-          <h6 class="mb-1"><i class="fa-solid fa-paint-roller me-2 text-accent"></i>Painting &amp; maintenance kits</h6>
-          <p class="mb-2">All-in-one solutions for estates and maintenance teams — bulk &amp; repeat supply.</p>
-          <span class="badge mb-2"><i class="fa-solid fa-circle-info me-1"></i>High-volume supply</span>
+          <h3 class="h6 mb-1"><i class="fa-solid fa-paint-roller me-2 text-accent"></i>Painting &amp; maintenance kits</h3>
+          <p class="mb-2">Paint accessories, tools and repeat-use bundles for estates teams.</p>
+          <span class="badge mb-2"><i class="fa-solid fa-circle-info me-1"></i>Bulk and repeat supply</span>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.25s">
         <div class="product-card h-100 shadow-sm">
-          <h6 class="mb-1"><i class="fa-solid fa-glass-water-droplet me-2 text-accent"></i>Cleaning &amp; hygiene</h6>
-          <p class="mb-2">Environmentally conscious products, large-scale procurement for facilities.</p>
-          <span class="badge mb-2"><i class="fa-solid fa-circle-info me-1"></i>Sustainable options</span>
+          <h3 class="h6 mb-1"><i class="fa-solid fa-glass-water-droplet me-2 text-accent"></i>Cleaning &amp; hygiene</h3>
+          <p class="mb-2">Chemicals, paper products and hygiene essentials for facilities teams.</p>
+          <span class="badge mb-2"><i class="fa-solid fa-circle-info me-1"></i>Multi-site options</span>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.3s">
         <div class="product-card h-100 shadow-sm">
-          <h6 class="mb-1"><i class="fa-solid fa-masks-theater me-2 text-accent"></i>And more</h6>
-          <p class="mb-2">We respond to bespoke RFQs for almost any public sector essential. Just ask.</p>
-          <span class="badge mb-2"><i class="fa-solid fa-circle-info me-1"></i>Bespoke sourcing</span>
+          <h3 class="h6 mb-1"><i class="fa-solid fa-box-open me-2 text-accent"></i>Bespoke RFQs</h3>
+          <p class="mb-2">Send the exact item, pack format and evidence requirements for review.</p>
+          <span class="badge mb-2"><i class="fa-solid fa-circle-info me-1"></i>Clear scope first</span>
         </div>
       </div>
     </div>
@@ -259,46 +207,47 @@
           <p class="mb-0">Email <a href="mailto:sorellonltd@gmail.com">sorellonltd@gmail.com</a> — we reply within <strong>one business day</strong>.</p>
         </div>
         <div class="col-lg-4 text-lg-end">
-          <a href="/contact.html" class="btn btn-cta btn-cta--light">Contact Sorellon <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+          <a href="/contact" class="btn btn-cta btn-cta--light">Contact Sorellon <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
         </div>
       </div>
     </div>
   </div>
 </section>
+</main>
 
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="container">
     <div class="row g-4">
       <div class="col-lg-4">
-        <img src="/assets/logo-white.svg" alt="Sorellon" height="32" class="mb-3" />
-        <p class="mb-3" style="max-width:32ch;">Reliable, compliant supply for UK public sector buyers.</p>
+        <img src="/assets/logo-white.svg" alt="Sorellon" width="119" height="32" class="mb-3" />
+        <p class="mb-3" style="max-width:32ch;">Goods supply for UK public-sector buyers.</p>
         <div class="d-flex gap-3 small">
           <span><i class="fa-solid fa-circle-dot me-1"></i>SME</span>
           <span><i class="fa-solid fa-location-dot me-1"></i>UK-based</span>
         </div>
       </div>
       <div class="col-6 col-lg-2">
-        <h6 class="footer-heading">Company</h6>
+        <h2 class="footer-heading">Company</h2>
         <ul class="footer-links">
-          <li><a href="/sectors.html">Sectors</a></li>
-          <li><a href="/capabilities.html">Capabilities</a></li>
-          <li><a href="/china-sourcing">China sourcing</a></li>
-          <li><a href="/why.html">Why Sorellon</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/public-sector">Public Sector</a></li>
+          <li><a href="/sectors">Sectors</a></li>
+          <li><a href="/capabilities">Capabilities</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-3">
-        <h6 class="footer-heading">Resources</h6>
+        <h2 class="footer-heading">Resources</h2>
         <ul class="footer-links">
-          <li><a href="/capability-statement.html">Capability Statement</a></li>
-          <li><a href="/carbon-reduction.html">Carbon Reduction</a></li>
-          <li><a href="/modern-slavery.html">Modern Slavery</a></li>
-          <li><a href="/health-and-safety.html">Health &amp; Safety</a></li>
+          <li><a href="/capability-statement">Capability Statement</a></li>
+          <li><a href="/environmental-policy">Environmental Policy</a></li>
+          <li><a href="/equality-and-diversity">Equality &amp; Diversity</a></li>
+          <li><a href="/modern-slavery">Modern Slavery</a></li>
         </ul>
       </div>
       <div class="col-lg-3">
-        <h6 class="footer-heading">Get in touch</h6>
+        <h2 class="footer-heading">Get in touch</h2>
         <ul class="footer-links">
           <li><i class="fa-regular fa-envelope me-2"></i><a href="mailto:sorellonltd@gmail.com">sorellonltd@gmail.com</a></li>
           <li><i class="fa-solid fa-location-dot me-2"></i>United Kingdom</li>
@@ -307,13 +256,13 @@
       </div>
     </div>
     <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <div><a href="/privacy.html" class="me-3">Privacy Policy</a><a href="/terms.html">Terms &amp; Conditions</a></div>
+      <div><a href="/privacy" class="me-3">Privacy Policy</a><a href="/terms">Terms &amp; Conditions</a></div>
       <div class="mt-2 mt-md-0">&copy; <span id="y"></span> Sorellon Limited</div>
     </div>
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/bootstrap.bundle.min.js"></script>
 <script src="/assets/main.js"></script>
 <script>
 // ===== Navbar scroll transition (homepage only) =====

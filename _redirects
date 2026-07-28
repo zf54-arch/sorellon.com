@@ -7,23 +7,37 @@ https://www.sorellon.com/*  https://sorellon.com/:splat   301!
 /contact                    /contact.html                  200
 /capabilities               /capabilities.html             200
 /sectors                    /sectors.html                  200
-/why                        /why.html                      200
+/about                      /about.html                    200
+/public-sector              /public-sector.html            200
+/environmental-policy       /environmental-policy.html     200
+/equality-and-diversity     /equality-and-diversity.html   200
+/modern-slavery             /modern-slavery.html           200
+/health-and-safety          /health-and-safety.html        200
+/carbon-reduction           /carbon-reduction.html         200
 /privacy                    /privacy.html                  200
 /terms                      /terms.html                    200
 /capability-statement       /capability-statement.html     200
 /capability-statement/      /capability-statement.html     200
-/china-sourcing             /china-sourcing.html           200
-/china-sourcing/            /china-sourcing.html           200
+/china-sourcing             /capabilities                  301
+/china-sourcing/            /capabilities                  301
+/why                        /about                         301
 
 # Canonicalise .html → clean (avoid duplicates)
 /contact.html               /contact                        301
 /capabilities.html          /capabilities                   301
 /sectors.html               /sectors                        301
-/why.html                   /why                            301
+/about.html                 /about                          301
+/public-sector.html         /public-sector                  301
+/environmental-policy.html  /environmental-policy           301
+/equality-and-diversity.html /equality-and-diversity        301
+/modern-slavery.html        /modern-slavery                 301
+/health-and-safety.html     /health-and-safety              301
+/carbon-reduction.html      /carbon-reduction               301
 /privacy.html               /privacy                        301
 /terms.html                 /terms                          301
 /capability-statement.html  /capability-statement           301
-/china-sourcing.html        /china-sourcing                 301
+/china-sourcing.html        /capabilities                   301
+/why.html                   /about                          301
 
 # PDF short links → actual files (specific rules; keep ABOVE fallback)
 /capability-statement.pdf   /assets/policies/Sorellon-Capability-Statement.pdf         200
@@ -33,5 +47,5 @@ https://www.sorellon.com/*  https://sorellon.com/:splat   301!
 # Assets
 /assets/*                   /assets/:splat                  200
 
-# SPA fallback LAST
-/*                          /index.html                     200
+# Real 404 LAST
+/*                          /404.html                       404
