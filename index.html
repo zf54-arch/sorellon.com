@@ -301,6 +301,7 @@
   var canvas = document.getElementById('heroCanvas');
   if (!canvas) return;
   var ctx = canvas.getContext('2d');
+  var hero = canvas.closest('.hero') || canvas;
 
   // ---- Simplex 2D noise (Stefan Gustavson, public domain) ----
   var F2 = 0.5 * (Math.sqrt(3) - 1);
@@ -353,7 +354,8 @@
   var DASH_HALF  = isMobile ? 7   : 10;
   var FREQ       = 0.0022;   // spatial noise frequency for angle
   var FREQ2      = 0.0016;   // secondary noise for accent colour
-  var TIME_SPEED = 0.0022;   // animation speed
+  var DRIFT_SPEED = 0.105;   // noise-coordinate drift per second
+  var PULSE_SPEED = 1.25;    // dash breathing speed in radians per second
   var MOUSE_EASE = 0.065;    // mouse lerp factor
   var VORTEX_R   = 175;      // pixel radius of mouse influence
   var VORTEX_PULL = 0.72;    // how strongly mouse orients dashes (0–1)
@@ -362,6 +364,7 @@
   var mouseX = 0.5, mouseY = 0.5;
   var targetMouseX = 0.5, targetMouseY = 0.5;
   var time = 0;
+  var lastFrameTime = 0;
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Precompute which cells are "accent" — only recalculate on resize
@@ -389,7 +392,14 @@
     buildColorMap();
   }
 
-  function draw() {
+  function draw(frameTime) {
+    // Use elapsed time so motion stays consistent across refresh rates.
+    var now = typeof frameTime === 'number' ? frameTime : performance.now();
+    if (!lastFrameTime) lastFrameTime = now;
+    var deltaSeconds = Math.min((now - lastFrameTime) / 1000, 0.05);
+    lastFrameTime = now;
+    time += deltaSeconds;
+
     // Smooth mouse easing
     mouseX += (targetMouseX - mouseX) * MOUSE_EASE;
     mouseY += (targetMouseY - mouseY) * MOUSE_EASE;
@@ -417,7 +427,7 @@
         var y = row * SPACING - SPACING * 0.5;
 
         // Flow angle from simplex noise (slow temporal drift)
-        var n     = noise2D(x * FREQ + time * 0.18, y * FREQ + time * 0.09);
+        var n     = noise2D(x * FREQ + time * DRIFT_SPEED, y * FREQ + time * DRIFT_SPEED * 0.55);
         var angle = n * Math.PI * 3.0;
 
         // Mouse vortex: orient dashes near cursor toward it
@@ -434,7 +444,8 @@
         }
 
         // Dash geometry
-        var dashLen = DASH_HALF * (1 + infl * 0.5);
+        var breathe = 0.88 + 0.14 * Math.sin(time * PULSE_SPEED + row * 0.31 + col * 0.23);
+        var dashLen = DASH_HALF * breathe * (1 + infl * 0.5);
         var cos = Math.cos(angle) * dashLen;
         var sin = Math.sin(angle) * dashLen;
 
@@ -459,7 +470,6 @@
       }
     }
 
-    time += TIME_SPEED;
     if (!prefersReducedMotion) requestAnimationFrame(draw);
   }
 
@@ -470,13 +480,13 @@
     resize();
   });
 
-  canvas.addEventListener('mousemove', function(e) {
+  hero.addEventListener('pointermove', function(e) {
     var rect = canvas.getBoundingClientRect();
     targetMouseX = (e.clientX - rect.left) / rect.width;
     targetMouseY = (e.clientY - rect.top)  / rect.height;
   });
 
-  canvas.addEventListener('mouseleave', function() {
+  hero.addEventListener('pointerleave', function() {
     targetMouseX = 0.5;
     targetMouseY = 0.5;
   });
