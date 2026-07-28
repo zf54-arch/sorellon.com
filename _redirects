@@ -18,9 +18,9 @@ https://www.sorellon.com/*  https://sorellon.com/:splat   301!
 /terms                      /terms.html                    200
 /capability-statement       /capability-statement.html     200
 /capability-statement/      /capability-statement.html     200
-/china-sourcing             /capabilities                  301
-/china-sourcing/            /capabilities                  301
-/why                        /about                         301
+/china-sourcing             /capabilities                  301!
+/china-sourcing/            /capabilities                  301!
+/why                        /about                         301!
 
 # Canonicalise .html → clean (avoid duplicates)
 /contact.html               /contact                        301
@@ -36,8 +36,8 @@ https://www.sorellon.com/*  https://sorellon.com/:splat   301!
 /privacy.html               /privacy                        301
 /terms.html                 /terms                          301
 /capability-statement.html  /capability-statement           301
-/china-sourcing.html        /capabilities                   301
-/why.html                   /about                          301
+/china-sourcing.html        /capabilities                   301!
+/why.html                   /about                          301!
 
 # PDF short links → actual files (specific rules; keep ABOVE fallback)
 /capability-statement.pdf   /assets/policies/Sorellon-Capability-Statement.pdf         200
