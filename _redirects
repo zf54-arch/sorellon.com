@@ -4,6 +4,10 @@ http://www.sorellon.com/*   https://sorellon.com/:splat   301!
 https://www.sorellon.com/*  https://sorellon.com/:splat   301!
 
 # Clean URLs (no .html in the bar)
+/thank-you /contact 301!
+/thank-you/ /contact 301!
+/index.html / 301!
+/thank-you.html /contact 301!
 /contact                    /contact.html                  200
 /capabilities               /capabilities.html             200
 /sectors                    /sectors.html                  200
@@ -18,6 +22,12 @@ https://www.sorellon.com/*  https://sorellon.com/:splat   301!
 /terms                      /terms.html                    200
 /capability-statement       /capability-statement.html     200
 /capability-statement/      /capability-statement.html     200
+/rfq                         /contact                      301
+/rfq/                        /contact                      301
+/request-a-quote             /contact                      301
+/request-a-quote/            /contact                      301
+/rfq.html                    /contact                      301!
+/request-a-quote.html        /contact                      301!
 /china-sourcing             /capabilities                  301!
 /china-sourcing/            /capabilities                  301!
 /why                        /about                         301!
@@ -45,6 +55,7 @@ https://www.sorellon.com/*  https://sorellon.com/:splat   301!
 /terms.pdf                  /assets/policies/Sorellon-Terms-and-Conditions.pdf         200
 
 # Assets
+/assets/sorellon-supplier-shortlist-sample.pdf /capability-statement.pdf 301!
 /assets/*                   /assets/:splat                  200
 
 # Real 404 LAST
