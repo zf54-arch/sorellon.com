@@ -29,14 +29,16 @@
   <!-- Vendor CSS -->
   <link href="/assets/site.min.css" rel="stylesheet" />
 
+  <link href="/assets/refinement.css" rel="stylesheet" />
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <!-- NAV (transparent, fixed over hero) -->
-<nav class="navbar navbar-expand-lg navbar--transparent" id="mainNav">
+<nav class="navbar navbar-expand-lg sticky-top navbar--inner" id="mainNav">
   <div class="container py-2">
     <a class="navbar-brand d-flex align-items-center" href="/">
-      <img src="/assets/logo-white.svg" alt="Sorellon" width="130" height="35" class="me-2" id="navLogo" />
+      <img src="/assets/logo.svg" alt="Sorellon" width="130" height="35" class="me-2" id="navLogo" />
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -47,6 +49,7 @@
         <li class="nav-item"><a class="nav-link fw-semibold" href="/sectors">Sectors<span class="nav-sep"></span></a></li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="/capabilities">Capabilities<span class="nav-sep"></span></a></li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="/about">About<span class="nav-sep"></span></a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/careers">Careers<span class="nav-sep"></span></a></li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="/contact">Contact<span class="nav-sep"></span></a></li>
       </ul>
       <a href="/contact" class="btn btn-cta btn-cta--primary btn-sm ms-lg-3">Request a Quote <span class="btn-arrow"></span></a>
@@ -54,161 +57,55 @@
   </div>
 </nav>
 
-<main>
-<!-- HERO -->
-<section class="hero hero--home" id="hero">
-  <canvas id="heroCanvas" class="hero-canvas" role="presentation" aria-hidden="true"></canvas>
-
+<main id="main-content">
+<section class="supply-hero" aria-labelledby="home-title">
   <div class="container">
-    <div class="hero-content">
-      <span class="hero-badge mb-3">
-        <span class="seg">UK public sector</span>
-        <span class="seg">Goods supply</span>
-        <span class="seg">UK-based SME</span>
-      </span>
-      <h1>
-        Goods supply for UK<br>
-        <span style="color:var(--accent)">public-sector buyers.</span>
-      </h1>
-      <p class="lead">
-        Cleaning, hygiene, healthcare and maintenance products quoted to your
-        specification. Clear lead times. Product evidence where required.
-      </p>
-      <div class="d-flex gap-3 flex-wrap justify-content-center">
-        <a href="/contact" class="btn btn-cta btn-cta--accent btn-lg">
-          Start an RFQ <span class="btn-arrow"></span>
-        </a>
-        <a href="/capability-statement" class="btn btn-cta btn-cta--outline-light btn-lg">
-          Capability Statement <span class="btn-arrow"></span>
-        </a>
-      </div>
-      <div class="mt-4 small" style="color:rgba(255,255,255,0.65);">
-        <span>SME</span>
-        <span class="ms-3">UK-based</span>
-        <span class="ms-3">24-hour quote target</span>
-        <span class="ms-3">Multi-site delivery</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-scroll-indicator">
-    <span>Scroll</span>
-    <div class="hero-scroll-line"></div>
+    <a class="hero-pill" href="/public-sector"><span class="pill-dot"></span> Supply for the UK public sector <span aria-hidden="true">↗</span></a>
+    <h1 id="home-title">Everyday essentials.<br>For the places we <span class="changing-word"><span>care.</span><span aria-hidden="true">learn.</span><span aria-hidden="true">work.</span></span></h1>
+    <p class="hero-intro">Cleaning, healthcare and maintenance goods.<br class="mobile-break"> Sourced to your specification. Delivered with care.</p>
+    <div class="hero-actions"><a href="/contact" class="btn btn-cta btn-cta--primary">Request a quote <span aria-hidden="true">↗</span></a><a href="/capabilities" class="btn btn-cta hero-secondary">Explore capabilities <span aria-hidden="true">→</span></a></div>
   </div>
 </section>
-
-<!-- EMAIL RFQ (floating card) -->
-<section class="rfq-section">
-  <div class="container" style="max-width:720px;">
-    <div class="rfq-card reveal">
-      <h2 class="h5 mb-2 text-center">Send an RFQ by email</h2>
-      <p class="text-muted text-center mb-3">Include the product, quantity, delivery points, required date and any standards or test evidence needed.</p>
-      <a href="mailto:sorellonltd@gmail.com?subject=RFQ%20-%20organisation%20name" class="btn btn-cta btn-cta--primary w-100 justify-content-center">Email sorellonltd@gmail.com <span class="btn-arrow"></span></a>
-      <p class="small text-muted mt-2 mb-0 text-center">Target reply within one business day.</p>
-    </div>
+<section class="service-showcase container" aria-label="From sourcing to delivery">
+  <div class="showcase-controls"><span>FROM REQUIREMENT TO DELIVERY</span><button type="button" class="motion-toggle" aria-pressed="false" hidden>Pause motion <span aria-hidden="true">Ⅱ</span></button></div>
+  <div class="showcase-grid">
+    <a class="showcase-card sourcing-card" href="/capabilities" aria-label="Explore sourcing">
+      <div class="card-scene sourcing-scene" aria-hidden="true"><span class="scene-caption">IT STARTS WITH YOUR SPECIFICATION</span><div class="request-bubble">Surface wipes. 12 sites.<br>One clear specification.</div><div class="reply-bubble">Let's find the right fit.<div class="typing-dots"><i></i><i></i><i></i></div></div><div class="spec-tags"><span>Pack format</span><span>Lead time</span><span>Product evidence</span></div></div>
+      <div class="showcase-label"><h2><svg class="line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6M7 10h6m-3-3v6"/></svg>Sourcing</h2><span>Explore ↗</span></div>
+    </a>
+    <a class="showcase-card compliance-card" href="/public-sector" aria-label="Explore compliance support">
+      <div class="card-scene compliance-scene" aria-hidden="true"><span class="scene-caption">A CLEARER VIEW OF THE DETAIL</span><div class="document-top"><svg class="line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></svg><span>Product evidence<br><small>Reviewed against your requirement</small></span></div><div class="evidence-line"><span>Specification</span><span class="scan-check">✓</span></div><div class="evidence-line"><span>Declarations &amp; test reports</span><span class="scan-check">✓</span></div><div class="evidence-line"><span>Traceability</span><span class="scan-check">✓</span></div><div class="evidence-note">Evidence confirmed per proposed product</div></div>
+      <div class="showcase-label"><h2><svg class="line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></svg>Compliance</h2><span>Explore ↗</span></div>
+    </a>
+    <a class="showcase-card delivery-card" href="/capabilities" aria-label="Explore delivery planning">
+      <div class="card-scene delivery-scene" aria-hidden="true"><span class="scene-caption">ONE PLAN. MULTIPLE DESTINATIONS.</span><svg class="delivery-route" viewBox="0 0 360 190" fill="none"><path class="route-base" d="M45 125H125Q155 125 155 95V65Q155 40 185 40H305M155 95H225Q250 95 250 120V155H305"/><path class="route-progress" d="M45 125H125Q155 125 155 95V65Q155 40 185 40H305M155 95H225Q250 95 250 120V155H305"/><circle cx="45" cy="125" r="7"/><circle cx="305" cy="40" r="7"/><circle cx="305" cy="155" r="7"/></svg><span class="route-origin">Your order</span><span class="route-site site-one">Site 01</span><span class="route-site site-two">Site 02</span><div class="delivery-note"><svg class="line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5h12v13H2Zm12 5h4l4 5v3h-8M14 15h8"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg> Delivery planning, around you</div></div>
+      <div class="showcase-label"><h2><svg class="line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5h12v13H2Zm12 5h4l4 5v3h-8M14 15h8"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg>Delivery</h2><span>Explore ↗</span></div>
+    </a>
+  </div>
+  <div class="sector-tiles">
+<a href="/sectors" class="sector-tile icon-health"><svg class="line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6Z"/></svg><span>NHS &amp; healthcare</span><span aria-hidden="true">↗</span></a><a href="/sectors" class="sector-tile icon-government"><svg class="line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 9-5 9 5H3Zm0 13h18M5 11v7m7-7v7m7-7v7"/></svg><span>Local government</span><span aria-hidden="true">↗</span></a><a href="/sectors" class="sector-tile icon-education"><svg class="line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5L2 8Zm4 3v6c4 3 8 3 12 0v-6m4-3v9"/></svg><span>Education</span><span aria-hidden="true">↗</span></a><a href="/sectors" class="sector-tile icon-housing"><svg class="line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-8 9 8M5 9v12h14V9M9 21v-7h6v7"/></svg><span>Housing &amp; facilities</span><span aria-hidden="true">↗</span></a>
   </div>
 </section>
-
-<!-- Public-sector buying -->
-<section class="py-6 section-accent border-0">
+<section class="home-section" aria-labelledby="supply-title">
   <div class="container">
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-7 reveal">
-        <span class="section-divider"></span>
-        <h2 class="fw-bold mb-3 mt-1" style="color:#125f43;">Built around the buyer's specification</h2>
-        <p class="text-muted fs-5 mb-3">Send the product, volume, delivery points and required standards. We return price, lead time, assumptions and the evidence available for the proposed product.</p>
-        <p class="text-muted mb-0">We source through a vetted global supplier network. We do not substitute products or claim standards without supporting documents.</p>
-      </div>
-      <div class="col-lg-5 reveal">
-        <div class="card-lite">
-          <h3 class="h5 fw-bold mb-3" style="color:var(--forest-2);">Useful at first review</h3>
-          <ul class="check-list mb-0">
-            <li>Company and contact details</li>
-            <li>Product declarations and test evidence where applicable</li>
-            <li>SDS and lot traceability where applicable</li>
-            <li>Delivery plan and named UK contact</li>
-            <li>Public policies and current readiness status</li>
-          </ul>
-          <a href="/public-sector" class="link-brand d-inline-block mt-3 fw-semibold">Public-sector information </a>
-        </div>
-      </div>
+    <div class="section-heading"><span class="eyebrow">01 / WHAT WE SUPPLY</span><div><h2 id="supply-title">The essentials, covered.</h2><p>From a single requirement to repeat supply. Products, pack formats and documentation agreed around your needs.</p></div></div>
+    <div class="supply-categories">
+      <a class="category-row" href="/capabilities"><span class="category-number">01</span><h3>Cleaning &amp; hygiene</h3><p>Surface wipes, paper products, chemicals and janitorial supplies.</p><span aria-hidden="true">↗</span></a>
+      <a class="category-row" href="/capabilities"><span class="category-number">02</span><h3>Healthcare consumables</h3><p>PPE and clinical essentials, with product evidence checked against your requirements.</p><span aria-hidden="true">↗</span></a>
+      <a class="category-row" href="/capabilities"><span class="category-number">03</span><h3>Estates &amp; maintenance</h3><p>Painting accessories, tools and site-ready kits for facilities teams.</p><span aria-hidden="true">↗</span></a>
+      <a class="category-row" href="/contact"><span class="category-number">04</span><h3>Bespoke sourcing</h3><p>A specific product or custom kit? Send us your specification.</p><span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </section>
-
-<!-- Product Categories -->
-<section class="py-6">
+<section class="home-section procurement-section" aria-labelledby="approach-title">
   <div class="container">
-    <div class="row mb-4 align-items-end reveal">
-      <div class="col-lg-8">
-        <span class="section-divider"></span>
-        <h2 class="fw-bold mb-1 mt-1" style="color:#125f43;">Product categories</h2>
-        <p class="text-muted mb-0">Examples only. Each quote is built against the buyer's specification.</p>
-      </div>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.05s">
-        <div class="product-card h-100 shadow-sm">
-          <h3 class="h6 mb-1">Surface wipes (EN1276/EN14476)</h3>
-          <p class="mb-2">Bulk tubs and sachets. Product evidence checked against the stated requirement.</p>
-          <span class="badge mb-2">Specification-led</span>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.1s">
-        <div class="product-card h-100 shadow-sm">
-          <h3 class="h6 mb-1">Janitorial kits</h3>
-          <p class="mb-2">Cloths, sacks, signs, cleaning tools and site-ready bundles.</p>
-          <span class="badge mb-2">Custom kit lists</span>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.15s">
-        <div class="product-card h-100 shadow-sm">
-          <h3 class="h6 mb-1">Healthcare consumables</h3>
-          <p class="mb-2">PPE and clinical consumables where the required product evidence is available.</p>
-          <span class="badge mb-2">Evidence checked per product</span>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.2s">
-        <div class="product-card h-100 shadow-sm">
-          <h3 class="h6 mb-1">Painting &amp; maintenance kits</h3>
-          <p class="mb-2">Paint accessories, tools and repeat-use bundles for estates teams.</p>
-          <span class="badge mb-2">Bulk and repeat supply</span>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.25s">
-        <div class="product-card h-100 shadow-sm">
-          <h3 class="h6 mb-1">Cleaning &amp; hygiene</h3>
-          <p class="mb-2">Chemicals, paper products and hygiene essentials for facilities teams.</p>
-          <span class="badge mb-2">Multi-site options</span>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.3s">
-        <div class="product-card h-100 shadow-sm">
-          <h3 class="h6 mb-1">Bespoke RFQs</h3>
-          <p class="mb-2">Send the exact item, pack format and evidence requirements for review.</p>
-          <span class="badge mb-2">Clear scope first</span>
-        </div>
-      </div>
-    </div>
+    <div class="section-heading"><span class="eyebrow">02 / OUR APPROACH</span><div><h2 id="approach-title">Clear at every step.</h2><p>Practical procurement support, from the first specification to the final delivery point.</p></div></div>
+    <div class="approach-grid"><article><span class="eyebrow">01 / DEFINE</span><h3>Your requirement comes first.</h3><p>Share the product, quantity, delivery date and required standards. We check the detail before we quote.</p></article><article><span class="eyebrow">02 / CONFIRM</span><h3>A quote you can assess.</h3><p>Price, lead time and available product evidence, with assumptions clearly set out.</p></article><article><span class="eyebrow">03 / DELIVER</span><h3>One point of contact.</h3><p>Agree the delivery plan and receive straightforward updates from a named UK contact.</p></article></div>
+    <a class="quiet-link" href="/public-sector">Information for procurement teams <span aria-hidden="true">→</span></a>
   </div>
 </section>
-
-<!-- CTA -->
-<section class="cta-section reveal">
-  <div class="container">
-    <div class="cta-banner">
-      <div class="row align-items-center g-3">
-        <div class="col-lg-8">
-          <h3 class="mb-2">Need a rapid quote?</h3>
-          <p class="mb-0">Email <a href="mailto:sorellonltd@gmail.com">sorellonltd@gmail.com</a> — we reply within <strong>one business day</strong>.</p>
-        </div>
-        <div class="col-lg-4 text-lg-end">
-          <a href="/contact" class="btn btn-cta btn-cta--light">Contact Sorellon <span class="btn-arrow"></span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="home-section sectors-summary"><div class="container"><span class="eyebrow">03 / WHO WE SUPPORT</span><h2>Built around public service.</h2><p>Healthcare &nbsp; / &nbsp; Local government &nbsp; / &nbsp; Education &nbsp; / &nbsp; Housing &amp; facilities &nbsp; / &nbsp; Central government</p><a class="quiet-link" href="/sectors">Explore the sectors <span aria-hidden="true">→</span></a></div></section>
+<section class="home-enquiry"><div class="container"><div><span class="eyebrow">LET’S TALK REQUIREMENTS</span><h2>What do you need to source?</h2><p>Send your specification. We aim to reply within one business day.</p></div><a href="/contact" class="btn btn-cta btn-cta--light">Request a quote <span aria-hidden="true">↗</span></a></div></section>
 </main>
 
 <!-- FOOTER -->
@@ -229,7 +126,7 @@
           <li><a href="/public-sector">Public Sector</a></li>
           <li><a href="/sectors">Sectors</a></li>
           <li><a href="/capabilities">Capabilities</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="/about">About</a></li><li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
@@ -245,7 +142,7 @@
       <div class="col-lg-3">
         <h2 class="footer-heading">Get in touch</h2>
         <ul class="footer-links">
-          <li><a href="mailto:sorellonltd@gmail.com">sorellonltd@gmail.com</a></li>
+          <li><a href="mailto:sales@sorellon.com">sales@sorellon.com</a></li>
           <li>United Kingdom</li>
           <li>Reply within 1 day</li>
         </ul>
@@ -260,245 +157,6 @@
 
 <script src="/assets/vendor/bootstrap.bundle.min.js"></script>
 <script src="/assets/main.js"></script>
-<script>
-// ===== Navbar scroll transition (homepage only) =====
-(function() {
-  var nav = document.getElementById('mainNav');
-  var logo = document.getElementById('navLogo');
-  var hero = document.getElementById('hero');
-  if (!nav || !hero) return;
 
-  function onScroll() {
-    var scrolled = window.scrollY > hero.offsetHeight * 0.8;
-    nav.classList.toggle('navbar--scrolled', scrolled);
-    nav.classList.toggle('navbar--transparent', !scrolled);
-    logo.src = scrolled ? '/assets/logo.svg' : '/assets/logo-white.svg';
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-})();
-
-// ===== Scroll-reveal observer =====
-(function() {
-  var reveals = document.querySelectorAll('.reveal');
-  if (!reveals.length) return;
-
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
-
-  reveals.forEach(function(el) { observer.observe(el); });
-})();
-
-// ===== Vector Field Animation =====
-(function() {
-  var canvas = document.getElementById('heroCanvas');
-  if (!canvas) return;
-  var ctx = canvas.getContext('2d');
-  var hero = canvas.closest('.hero') || canvas;
-
-  // ---- Simplex 2D noise (Stefan Gustavson, public domain) ----
-  var F2 = 0.5 * (Math.sqrt(3) - 1);
-  var G2 = (3 - Math.sqrt(3)) / 6;
-  var grad3 = [[1,1],[-1,1],[1,-1],[-1,-1],[1,0],[-1,0],[0,1],[0,-1]];
-  var perm = new Uint8Array(512);
-  var p = [151,160,137,91,90,15,131,13,201,95,96,53,194,233,7,225,
-    140,36,103,30,69,142,8,99,37,240,21,10,23,190,6,148,
-    247,120,234,75,0,26,197,62,94,252,219,203,117,35,11,32,
-    57,177,33,88,237,149,56,87,174,20,125,136,171,168,68,175,
-    74,165,71,134,139,48,27,166,77,146,158,231,83,111,229,122,
-    60,211,133,230,220,105,92,41,55,46,245,40,244,102,143,54,
-    65,25,63,161,1,216,80,73,209,76,132,187,208,89,18,169,
-    200,196,135,130,116,188,159,86,164,100,109,198,173,186,3,64,
-    52,217,226,250,124,123,5,202,38,147,118,126,255,82,85,212,
-    207,206,59,227,47,16,58,17,182,189,28,42,223,183,170,213,
-    119,248,152,2,44,154,163,70,221,153,101,155,167,43,172,9,
-    129,22,39,253,19,98,108,110,79,113,224,232,178,185,112,104,
-    218,246,97,228,251,34,242,193,238,210,144,12,191,179,162,241,
-    81,51,145,235,249,14,239,107,49,192,214,31,181,199,106,157,
-    184,84,204,176,115,121,50,45,127,4,150,254,138,236,205,93,
-    222,114,67,29,24,72,243,141,128,195,78,66,215,61,156,180];
-  for (var i = 0; i < 256; i++) { perm[i] = p[i]; perm[i + 256] = p[i]; }
-
-  function noise2D(xin, yin) {
-    var s = (xin + yin) * F2;
-    var i = Math.floor(xin + s);
-    var j = Math.floor(yin + s);
-    var t = (i + j) * G2;
-    var X0 = i - t, Y0 = j - t;
-    var x0 = xin - X0, y0 = yin - Y0;
-    var i1, j1;
-    if (x0 > y0) { i1 = 1; j1 = 0; } else { i1 = 0; j1 = 1; }
-    var x1 = x0 - i1 + G2, y1 = y0 - j1 + G2;
-    var x2 = x0 - 1 + 2 * G2, y2 = y0 - 1 + 2 * G2;
-    var ii = i & 255, jj = j & 255;
-    var n0 = 0, n1 = 0, n2 = 0;
-    var t0 = 0.5 - x0 * x0 - y0 * y0;
-    if (t0 >= 0) { t0 *= t0; var gi = perm[ii + perm[jj]] & 7; n0 = t0 * t0 * (grad3[gi][0] * x0 + grad3[gi][1] * y0); }
-    var t1 = 0.5 - x1 * x1 - y1 * y1;
-    if (t1 >= 0) { t1 *= t1; var gi1 = perm[ii + i1 + perm[jj + j1]] & 7; n1 = t1 * t1 * (grad3[gi1][0] * x1 + grad3[gi1][1] * y1); }
-    var t2 = 0.5 - x2 * x2 - y2 * y2;
-    if (t2 >= 0) { t2 *= t2; var gi2 = perm[ii + 1 + perm[jj + 1]] & 7; n2 = t2 * t2 * (grad3[gi2][0] * x2 + grad3[gi2][1] * y2); }
-    return 70 * (n0 + n1 + n2);
-  }
-
-  // ---- Config ----
-  var isMobile = window.innerWidth < 768;
-  var SPACING    = isMobile ? 28  : 35;
-  var DASH_HALF  = isMobile ? 7   : 10;
-  var FREQ       = 0.0022;   // spatial noise frequency for angle
-  var FREQ2      = 0.0016;   // secondary noise for accent colour
-  var DRIFT_SPEED = 0.105;   // noise-coordinate drift per second
-  var PULSE_SPEED = 1.25;    // dash breathing speed in radians per second
-  var MOUSE_EASE = 0.065;    // mouse lerp factor
-  var VORTEX_R   = 175;      // pixel radius of mouse influence
-  var VORTEX_PULL = 0.72;    // how strongly mouse orients dashes (0–1)
-  var width, height, cols, rows;
-  var colorMap = [];         // precomputed per-cell accent flag
-  var mouseX = 0.5, mouseY = 0.5;
-  var targetMouseX = 0.5, targetMouseY = 0.5;
-  var time = 0;
-  var lastFrameTime = 0;
-  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Precompute which cells are "accent" — only recalculate on resize
-  function buildColorMap() {
-    colorMap = [];
-    for (var r = 0; r <= rows; r++) {
-      for (var c = 0; c <= cols; c++) {
-        var px = c * SPACING - SPACING * 0.5;
-        var py = r * SPACING - SPACING * 0.5;
-        colorMap.push(noise2D(px * FREQ2 + 40.5, py * FREQ2 + 80.3) > 0.28);
-      }
-    }
-  }
-
-  function resize() {
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var rect = canvas.getBoundingClientRect();
-    width  = rect.width;
-    height = rect.height;
-    canvas.width  = width  * dpr;
-    canvas.height = height * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    cols = Math.ceil(width  / SPACING) + 2;
-    rows = Math.ceil(height / SPACING) + 2;
-    buildColorMap();
-  }
-
-  function draw(frameTime) {
-    // Use elapsed time so motion stays consistent across refresh rates.
-    var now = typeof frameTime === 'number' ? frameTime : performance.now();
-    if (!lastFrameTime) lastFrameTime = now;
-    var deltaSeconds = Math.min((now - lastFrameTime) / 1000, 0.05);
-    lastFrameTime = now;
-    time += deltaSeconds;
-
-    // Smooth mouse easing
-    mouseX += (targetMouseX - mouseX) * MOUSE_EASE;
-    mouseY += (targetMouseY - mouseY) * MOUSE_EASE;
-
-    ctx.clearRect(0, 0, width, height);
-
-    // Background gradient
-    var grad = ctx.createLinearGradient(0, 0, width * 0.4, height);
-    grad.addColorStop(0,    '#083530');
-    grad.addColorStop(0.55, '#0d4e3e');
-    grad.addColorStop(1,    '#125850');
-    ctx.fillStyle = grad;
-    ctx.fillRect(0, 0, width, height);
-
-    ctx.lineCap = 'round';
-
-    var mx  = mouseX  * width;
-    var my  = mouseY  * height;
-    var vr2 = VORTEX_R * VORTEX_R;
-    var idx = 0;
-
-    for (var row = 0; row <= rows; row++) {
-      for (var col = 0; col <= cols; col++) {
-        var x = col * SPACING - SPACING * 0.5;
-        var y = row * SPACING - SPACING * 0.5;
-
-        // Flow angle from simplex noise (slow temporal drift)
-        var n     = noise2D(x * FREQ + time * DRIFT_SPEED, y * FREQ + time * DRIFT_SPEED * 0.55);
-        var angle = n * Math.PI * 3.0;
-
-        // Mouse vortex: orient dashes near cursor toward it
-        var dx = x - mx, dy = y - my;
-        var d2   = dx * dx + dy * dy;
-        var infl = 0;
-        if (d2 < vr2 * 4) {
-          infl = Math.exp(-d2 / vr2);
-          var toMouse = Math.atan2(my - y, mx - x);
-          var diff = toMouse - angle;
-          // Wrap to [-PI, PI]
-          diff = diff - Math.PI * 2 * Math.round(diff / (Math.PI * 2));
-          angle += diff * infl * VORTEX_PULL;
-        }
-
-        // Dash geometry
-        var breathe = 0.88 + 0.14 * Math.sin(time * PULSE_SPEED + row * 0.31 + col * 0.23);
-        var dashLen = DASH_HALF * breathe * (1 + infl * 0.5);
-        var cos = Math.cos(angle) * dashLen;
-        var sin = Math.sin(angle) * dashLen;
-
-        // Colour: accent teal (~37%) vs soft white
-        var isAccent = colorMap[idx++];
-        var alpha, lw;
-        if (isAccent) {
-          alpha = 0.22 + infl * 0.42;
-          lw    = 1.1  + infl * 0.7;
-          ctx.strokeStyle = 'rgba(26,208,158,' + alpha + ')';
-        } else {
-          alpha = 0.09 + infl * 0.20;
-          lw    = 0.85 + infl * 0.5;
-          ctx.strokeStyle = 'rgba(255,255,255,' + alpha + ')';
-        }
-
-        ctx.lineWidth = lw;
-        ctx.beginPath();
-        ctx.moveTo(x - cos, y - sin);
-        ctx.lineTo(x + cos, y + sin);
-        ctx.stroke();
-      }
-    }
-
-    if (!prefersReducedMotion) requestAnimationFrame(draw);
-  }
-
-  window.addEventListener('resize', function() {
-    isMobile   = window.innerWidth < 768;
-    SPACING    = isMobile ? 28 : 35;
-    DASH_HALF  = isMobile ? 7  : 10;
-    resize();
-  });
-
-  hero.addEventListener('pointermove', function(e) {
-    var rect = canvas.getBoundingClientRect();
-    targetMouseX = (e.clientX - rect.left) / rect.width;
-    targetMouseY = (e.clientY - rect.top)  / rect.height;
-  });
-
-  hero.addEventListener('pointerleave', function() {
-    targetMouseX = 0.5;
-    targetMouseY = 0.5;
-  });
-
-  // Start
-  resize();
-  if (prefersReducedMotion) {
-    draw(); // single static frame
-  } else {
-    requestAnimationFrame(draw);
-  }
-})();
-</script>
 </body>
 </html>

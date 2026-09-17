@@ -18,13 +18,15 @@
 
 
   <link href="/assets/site.min.css" rel="stylesheet" />
+  <link href="/assets/refinement.css" rel="stylesheet" />
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <!-- NAV -->
 <nav class="navbar navbar-expand-lg sticky-top navbar--inner">
   <div class="container py-2">
-    <a class="navbar-brand d-flex align-items-center" href="/index.html">
+    <a class="navbar-brand d-flex align-items-center" href="/">
       <img src="/assets/logo.svg" alt="Sorellon" width="130" height="35" class="me-2" />
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +38,7 @@
         <li class="nav-item"><a class="nav-link fw-semibold" href="/sectors.html">Sectors<span class="nav-sep"></span></a></li>
         <li class="nav-item"><a class="nav-link fw-semibold active" aria-current="page" href="/capabilities.html">Capabilities<span class="nav-sep"></span></a></li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="/about">About<span class="nav-sep"></span></a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/careers">Careers<span class="nav-sep"></span></a></li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="/contact.html">Contact<span class="nav-sep"></span></a></li>
       </ul>
       <a href="/contact.html" class="btn btn-cta btn-cta--primary btn-sm ms-lg-3">Request a Quote <span class="btn-arrow"></span></a>
@@ -44,7 +47,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero hero--inner">
+<section id="main-content" class="hero hero--inner">
   <div class="hero-illustration"></div>
   <div class="container">
     <h1 class="hero-reveal">Simple products. Serious delivery.</h1>
@@ -63,28 +66,28 @@
     <div class="row g-4">
       <div class="col-md-6 col-lg-3 reveal reveal-d1">
         <div class="card-lite text-center h-100">
-          <div class="mb-3"></div>
+          <div class="mb-3"><span class="service-icon icon-sourcing"><svg class="line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6M7 10h6m-3-3v6"/></svg></span></div>
           <h5 class="fw-bold mb-2" style="color:var(--forest-2)">Sourcing</h5>
           <p class="text-muted mb-0 small">A vetted global supplier network. We match the specification to an evidenced product route.</p>
         </div>
       </div>
       <div class="col-md-6 col-lg-3 reveal reveal-d2">
         <div class="card-lite text-center h-100">
-          <div class="mb-3"></div>
+          <div class="mb-3"><span class="service-icon icon-compliance"><svg class="line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></svg></span></div>
           <h5 class="fw-bold mb-2" style="color:var(--forest-2)">Compliance</h5>
           <p class="text-muted mb-0 small">UKCA/CE evidence, technical files, safety data sheets, and traceability obtained where the specification requires them.</p>
         </div>
       </div>
       <div class="col-md-6 col-lg-3 reveal reveal-d3">
         <div class="card-lite text-center h-100">
-          <div class="mb-3"></div>
+          <div class="mb-3"><span class="service-icon icon-planning"><svg class="line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 11h18m-13 5 3 2 5-4"/></svg></span></div>
           <h5 class="fw-bold mb-2" style="color:var(--forest-2)">Supply planning</h5>
           <p class="text-muted mb-0 small">Lead times, call-off schedules, and multi-site delivery coordinated end to end.</p>
         </div>
       </div>
       <div class="col-md-6 col-lg-3 reveal reveal-d4">
         <div class="card-lite text-center h-100">
-          <div class="mb-3"></div>
+          <div class="mb-3"><span class="service-icon icon-support"><svg class="line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1M4 12H2v6h4v-6Zm16 0h2v6h-4v-6Zm0 6c0 3-4 3-8 3"/></svg></span></div>
           <h5 class="fw-bold mb-2" style="color:var(--forest-2)">UK support</h5>
           <p class="text-muted mb-0 small">Named contact, clear updates, and responsive communication. No call centres.</p>
         </div>
@@ -151,7 +154,7 @@
       <div class="row align-items-center g-3">
         <div class="col-lg-8">
           <h3 class="mb-2">Need a rapid quote?</h3>
-          <p class="mb-0">Email <a href="mailto:sorellonltd@gmail.com">sorellonltd@gmail.com</a> — we reply within <strong>one business day</strong>.</p>
+          <p class="mb-0">Email <a href="mailto:sales@sorellon.com">sales@sorellon.com</a> — we reply within <strong>one business day</strong>.</p>
         </div>
         <div class="col-lg-4 text-lg-end">
           <a href="/contact.html" class="btn btn-cta btn-cta--light btn-lg">Contact Sorellon <span class="btn-arrow"></span></a>
@@ -172,7 +175,7 @@
       </div>
       <div class="col-6 col-lg-2">
         <h6 class="footer-heading">Company</h6>
-        <ul class="footer-links"><li><a href="/public-sector">Public Sector</a></li><li><a href="/sectors">Sectors</a></li><li><a href="/capabilities">Capabilities</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul>
+        <ul class="footer-links"><li><a href="/public-sector">Public Sector</a></li><li><a href="/sectors">Sectors</a></li><li><a href="/capabilities">Capabilities</a></li><li><a href="/about">About</a></li><li><a href="/careers">Careers</a></li><li><a href="/contact">Contact</a></li></ul>
       </div>
       <div class="col-6 col-lg-3">
         <h6 class="footer-heading">Resources</h6>
@@ -180,7 +183,7 @@
       </div>
       <div class="col-lg-3">
         <h6 class="footer-heading">Get in touch</h6>
-        <ul class="footer-links"><li><a href="mailto:sorellonltd@gmail.com">sorellonltd@gmail.com</a></li><li>United Kingdom</li><li>Reply within 1 day</li></ul>
+        <ul class="footer-links"><li><a href="mailto:sales@sorellon.com">sales@sorellon.com</a></li><li>United Kingdom</li><li>Reply within 1 day</li></ul>
       </div>
     </div>
     <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">

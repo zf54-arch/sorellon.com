@@ -51,3 +51,18 @@
     history.replaceState(null, '', window.location.href.replace(/#$/, ''));
   }
 })();
+
+// One control pauses the decorative service previews and rotating headline.
+(function () {
+  var button = document.querySelector('.motion-toggle');
+  if (!button) return;
+  button.hidden = false;
+  button.addEventListener('click', function () {
+    var paused = document.body.classList.toggle('motion-paused');
+    button.setAttribute('aria-pressed', String(paused));
+    button.textContent = paused ? 'Resume motion ▷' : 'Pause motion Ⅱ';
+  });
+  document.addEventListener('visibilitychange', function () {
+    document.body.classList.toggle('motion-paused', document.hidden || button.getAttribute('aria-pressed') === 'true');
+  });
+})();

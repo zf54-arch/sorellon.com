@@ -4,6 +4,8 @@ http://www.sorellon.com/*   https://sorellon.com/:splat   301!
 https://www.sorellon.com/*  https://sorellon.com/:splat   301!
 
 # Clean URLs (no .html in the bar)
+/careers                    /careers.html                  200
+/careers/                   /careers                       301
 /contact                    /contact.html                  200
 /capabilities               /capabilities.html             200
 /sectors                    /sectors.html                  200
@@ -23,6 +25,7 @@ https://www.sorellon.com/*  https://sorellon.com/:splat   301!
 /why                        /about                         301!
 
 # Canonicalise .html → clean (avoid duplicates)
+/careers.html               /careers                       301
 /contact.html               /contact                        301
 /capabilities.html          /capabilities                   301
 /sectors.html               /sectors                        301
