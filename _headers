@@ -1,24 +1,31 @@
 /assets/*
   Cache-Control: public, max-age=86400
 
+# Shared styles and scripts use a short, explicit cache so updates can roll out promptly.
+/assets/*.css
+  Cache-Control: public, max-age=86400
+
+/assets/*.js
+  Cache-Control: public, max-age=86400
+
 /favicon.png
   Cache-Control: public, max-age=604800
 
-# === PDF caching (1 year, immutable) ===
+# Revalidate documents at stable URLs
 /assets/policies/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=0, must-revalidate
   Content-Type: application/pdf
 
 /capability-statement.pdf
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=0, must-revalidate
   Content-Type: application/pdf
 
 /privacy.pdf
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=0, must-revalidate
   Content-Type: application/pdf
 
 /terms.pdf
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=0, must-revalidate
   Content-Type: application/pdf
 
 /assets/icons/*

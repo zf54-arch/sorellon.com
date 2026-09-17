@@ -1,43 +1,20 @@
-// scripts/generate-pdf.js — non-blocking HTML→PDF export
-const { spawn } = require("child_process");
-const puppeteer = require("puppeteer");
-
-const PORT = process.env.PDF_PORT || 4321;
-const PUBLISH_DIR = process.env.PUBLISH_DIR || ".";              // where your .html files live
-const PAGE_PATH   = process.env.CAP_PAGE || "/capability-statement.html";
-const OUT_PATH    = process.env.OUT_PDF || "assets/policies/Sorellon-Capability-Statement.pdf";
-
+const fs = require('node:fs');
+const path = require('node:path');
+const puppeteer = require('puppeteer');
+const { createServer } = require('./preview');
 (async () => {
-  const server = spawn(process.platform === "win32" ? "npx.cmd" : "npx",
-    ["http-server", PUBLISH_DIR, "-p", String(PORT), "-c-1", "--silent"],
-    { stdio: "pipe" }
-  );
-  await new Promise(r => setTimeout(r, 1200));
-
-  try {
-    const browser = await puppeteer.launch({ args: ["--no-sandbox","--disable-setuid-sandbox"] });
-    const page = await browser.newPage();
-    await page.emulateMediaType("screen");
-    await page.goto(`http://localhost:${PORT}${PAGE_PATH}`, { waitUntil: "networkidle0", timeout: 120000 });
-
-    await page.addStyleTag({ content: `
-      @page { size: A4; margin: 14mm 14mm 16mm 14mm; }
-      .navbar .btn { display:none !important; }
-      .hero-illustration { display:none !important; }
-    `});
-
-    await page.pdf({
-      path: OUT_PATH,
-      format: "A4",
-      printBackground: true,
-      margin: { top: "14mm", right: "14mm", bottom: "16mm", left: "14mm" }
-    });
-
-    await browser.close();
-    console.log("✅ PDF written →", OUT_PATH);
-  } catch (err) {
-    console.warn("⚠️ PDF generation skipped:", err.message);
-  } finally {
-    server.kill();
-  }
-})();
+ const server=createServer(); await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+ let browser;
+ try {
+  browser=await puppeteer.launch();
+  const page=await browser.newPage();
+  const route=process.env.CAP_PAGE || '/capability-statement';
+  const response=await page.goto(`http://127.0.0.1:${server.address().port}${route}`,{waitUntil:'networkidle0'});
+  if(!response.ok()) throw new Error('Document page failed to load');
+  await page.emulateMediaType('print');
+  const output=process.env.OUT_PDF || 'assets/policies/Sorellon-Capability-Statement.pdf';
+  fs.mkdirSync(path.dirname(output),{recursive:true});
+  await page.pdf({path:output,format:'A4',preferCSSPageSize:true,printBackground:true,tagged:true,margin:{top:'14mm',right:'14mm',bottom:'16mm',left:'14mm'}});
+  console.log(`PDF written: ${output}`);
+ } finally { if(browser) await browser.close(); await new Promise(resolve=>server.close(resolve)); }
+})().catch(error=>{console.error(error.message);process.exitCode=1;});
